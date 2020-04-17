@@ -107,19 +107,4 @@ document.getElementById("clearstack").addEventListener("click", () => {
     runClearStack();
 
 });
-
-
-// myStack.push('katerina');
-// myStack.push('maria');
-// myStack.push('mariw');
-//console.log(myStack.peek());
-//console.log(myStack.pop());
-//console.log(myStack.peek());
-//myStack.push('Lydia');
-// console.log(myStack.size());
-//console.log(myStack.peek());
-//console.log(myStack.pop());
-//console.log(myStack.peek());
-
-
 //https://www.youtube.com/watch?v=Gj5qBheGOEo
