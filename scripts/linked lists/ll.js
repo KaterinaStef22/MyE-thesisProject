@@ -120,74 +120,46 @@ function LinkedList() {
         return currentNode.element;
     }
 
-    // prints the list items 
     this.printList = function () {
         var currentNode = head;
-        var str = "";
+        var collection = [];
         while (currentNode) {
-            str += currentNode.element + " ";
+            collection.push(currentNode.element);
             currentNode = currentNode.next;
         }
-        console.log(str);
-        return str
+        console.log(collection);
+        return collection
     }
 
 }
 
 
+var reverseList = new Array();
 var myList = new LinkedList();
 
-function runAdd() {
-    let inputValue = document.getElementById("linkedlisttext").value;
-    let text = document.createTextNode(inputValue);
-    if (disableAdd()) {
-        myList.add(inputValue);
-        document.querySelector(`[ll_cell_value='${0}']`).innerHTML = "";
-        document.querySelector(`[ll_cell_value='${0}']`).appendChild(text);
-        console.log(inputValue + " " + myList.size());
-        shiftTable();
-    }
-
-    if (myList.size() !== 0) {
-        document.querySelector(`[ll_cell_id='${myList.size()-1}']`).style.backgroundColor = "white";
-    }
-
-}
-
 function reverseArray(arr) {
-    var newArray = [];
-    for (var i = arr.length - 1; i >= 0; i--) {
-      newArray.push(arr[i]);
-    }
-    return newArray;
-  }
-
-  function removeWhiteSpaceFromArray(array){
-    return array.filter((item) => item != ' ');
+    return arr.map(arr => arr).reverse();
 }
- 
-function shiftTable() {
-    var reverseList = new Array();
-    console.log("List Here before reverse " + myList.printList());
-        reverseList = reverseArray(myList.printList());
-        reverseList= removeWhiteSpaceFromArray(reverseList)
-        console.log("List Here after reverse " +reverseList);
 
-        for (let i = 0; i <= myList.size(); i++) {
+function shiftLinkedListTable() {
+
+    if (myList.size() > 1) {
+        console.log("List Here before reverse " + myList.printList());
+        reverseList = reverseArray(myList.printList());
+        console.log("List Here after reverse " + reverseList);
+
+        for (let i = 1; i < myList.size(); i++) {
             document.querySelector(`[ll_cell_value='${i}']`).innerHTML = "";
         }
 
-        
-        for (let i = 0; i <= reverseList.size; i++) {
-            let text = document.createTextNode(reverseList[i]);
-            document.querySelector(`[ll_cell_value='${i}']`).appendChild(text);
+        for (let i = 1; i <= reverseList.length; i++) {
+            if (!(reverseList[i] === undefined)) {
+                let text = document.createTextNode(reverseList[i]);
+                document.querySelector(`[ll_cell_value='${i}']`).appendChild(text);
+            }
         }
-
-
-
-
+    }
 }
-
 
 function disableAdd() {
     if (myList.size() >= 10) {
@@ -201,6 +173,28 @@ function disableAdd() {
 
 }
 
+function runAdd() {
+    let inputValue = document.getElementById("linkedlisttext").value;
+    let text = document.createTextNode(inputValue);
+    if (disableAdd()) {
+        myList.add(inputValue);
+        document.querySelector(`[ll_cell_value='${0}']`).innerHTML = "";
+        document.querySelector(`[ll_cell_value='${0}']`).appendChild(text);
+        document.querySelector(`[ll_cell_id='${0}']`).style.backgroundColor = "lightgreen"
+        console.log(inputValue + " " + myList.size());
+        shiftLinkedListTable();
+    }
+
+    if (myList.size() !== 0 && myList.size()>1) {
+        document.querySelector(`[ll_cell_id='${myList.size()-1}']`).style.backgroundColor = "white";
+    }
+
+}
+
+
+
+
+
 function runRemove() {
 
 }
@@ -208,6 +202,29 @@ function runRemove() {
 function runSearch() {
 
 }
+
+function runClearList(){
+    console.log("size before while:" + myList.size())
+    while (myList.size()>= 0) {
+        console.log("size after while before removeAt:" + myList.size())
+      
+        if(myList.size()<1){
+            document.querySelector(`[ll_cell_value='${0}']`).innerHTML = "";
+        }else{
+            document.querySelector(`[ll_queue_cell_value='${myList.size()-1}']`).innerHTML = "";
+        }
+        
+        if (myList.size() === 0) {
+            break;
+        }
+        myList.removeAt(myList.size());
+        console.log("size after while after removeAt:" + myList.size())
+
+    }
+    disableAdd();
+
+}
+
 
 document.getElementById("add").addEventListener("click", () => {
     console.log("Add Button Clicked");
@@ -224,6 +241,10 @@ document.getElementById("search").addEventListener("click", () => {
     runSearch();
 });
 
+document.getElementById("clearlist").addEventListener("click", () => {
+    console.log("Clear Button Clicked");
+    runClearList();
+});
 
 
 // names.add('Katerina');
