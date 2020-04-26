@@ -40,7 +40,7 @@ function runPush() {
     console.log(inputValue + " " + myStack.size());
     document.querySelector(`[stack_cell_value='${myStack.size()}']`).innerHTML = "";
     document.querySelector(`[stack_cell_value='${myStack.size()}']`).appendChild(text);
-    document.querySelector(`[stack_cell_id='${myStack.size()}']`).style.backgroundColor = "cyan";
+    document.querySelector(`[stack_cell_id='${myStack.size()}']`).style.backgroundColor = ""; //cyan
     if (myStack.size() !== 0) {
         document.querySelector(`[stack_cell_id='${myStack.size()-1}']`).style.backgroundColor = "white";
 

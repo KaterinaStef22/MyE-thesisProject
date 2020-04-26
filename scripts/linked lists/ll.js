@@ -196,14 +196,14 @@ function runAdd() {
 
 
 function runRemove() {
-
+   
 }
 
 function runSearch() {
 
 }
 
-function runClearList(){
+/*function runClearList(){
     console.log("size before while:" + myList.size())
     while (myList.size()>= 0) {
         console.log("size after while before removeAt:" + myList.size())
@@ -224,7 +224,7 @@ function runClearList(){
     disableAdd();
 
 }
-
+*/
 
 document.getElementById("add").addEventListener("click", () => {
     console.log("Add Button Clicked");
@@ -245,14 +245,15 @@ document.getElementById("clearlist").addEventListener("click", () => {
     console.log("Clear Button Clicked");
     runClearList();
 });
+  
 
 
-// names.add('Katerina');
+ //names.add('Katerina');
 // names.add('Anastasia');
 // names.add('Dimitra');
-// names.add('Hliana');
-// names.add('Despoina');
-// console.log(names.size());
+//names.add('Hliana');
+ //names.add('Despoina');
+//console.log(names.size());
 // console.log(names.removeAt(3));
 // console.log(names.elementAt(3));
 // console.log(names.indexOf('Dimitra')); //poia h thesh
