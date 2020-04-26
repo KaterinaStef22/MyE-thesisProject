@@ -40,7 +40,7 @@ function runPush() {
     console.log(inputValue + " " + myStack.size());
     document.querySelector(`[stack_cell_value='${myStack.size()}']`).innerHTML = "";
     document.querySelector(`[stack_cell_value='${myStack.size()}']`).appendChild(text);
-    document.querySelector(`[stack_cell_id='${myStack.size()}']`).style.backgroundColor = "cyan";
+    document.querySelector(`[stack_cell_id='${myStack.size()}']`).style.backgroundColor = ""; //cyan
     if (myStack.size() !== 0) {
         document.querySelector(`[stack_cell_id='${myStack.size()-1}']`).style.backgroundColor = "white";
 
@@ -107,19 +107,4 @@ document.getElementById("clearstack").addEventListener("click", () => {
     runClearStack();
 
 });
-
-
-// myStack.push('katerina');
-// myStack.push('maria');
-// myStack.push('mariw');
-//console.log(myStack.peek());
-//console.log(myStack.pop());
-//console.log(myStack.peek());
-//myStack.push('Lydia');
-// console.log(myStack.size());
-//console.log(myStack.peek());
-//console.log(myStack.pop());
-//console.log(myStack.peek());
-
-
 //https://www.youtube.com/watch?v=Gj5qBheGOEo

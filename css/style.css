@@ -27,21 +27,6 @@ p {
 
 
 
-.extra-div h2 {
-    font-size: 0.9rem;
-    margin: 20px 0 15px 0;
-    font-weight: bold;
-    line-height: 1.1;
-    word-spacing: 4px;
-
-}
-
-.extra-div img {
-    border-radius: 100px;
-    padding: 10px;
-    width: 1000px;
-
-}
 
 .header {
     width: 100%;
@@ -165,67 +150,28 @@ p {
     transform: translateY(-20px);
 }
 
-.Stack,
-.Queue,
-.BinarySearchTree,
-.LinkedList {
-    /* background: rgba(77, 159, 201, 0.3);
- /* background: #f7f7f9;*/
-    padding: 200px 0;
-    margin-bottom: 110px;
-}
 
-.Stack {
-    margin-top: 1580px;
+/*STRUCTURES*/
 
-}
-
-
-.headings {
-    margin-bottom: 50px;
-}
-
-.headings h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-
-}
-
-/**--FOOTER--**/
-.footersection {
-    /*background-color:#b6f1ea;*/
-    background-color: rgba(0, 168, 255, 0.3);
-    padding: 2rem 0 2rem;
-    margin-top: 500px;
-}
-
-.footerscetion img {
-    box-align: center;
-    align-self: center;
-    vertical-align: center;
-    border: 0rem;
-}
-
-.footersection a {
-    color: rgb(70, 156, 236);
-}
-
-.footersection i {
+.structures p,
+ul {
     text-align: center;
-    font-size: 1.6rem;
-    margin: 1.2rem .5rem 0 0;
+
+
 }
 
-html {
-    scroll-behavior: smooth;
-}
+.structures img {}
 
-/*algorithms*/
+
+
+
+/*ALGORITHMS LITTLE WORDS */
 
 .algorithms {
     width: 100%;
     height: 100vh;
     padding: 80px 0;
+    margin-bottom: 2000px;
 }
 
 .box {
@@ -245,9 +191,25 @@ html {
     color: white;
 }
 
+*/ .row1 {
+    display: flex;
+    width: 80%;
+    min-height: 300px;
+    margin: 0 auto;
+
+}
+
+.col1 {
+
+    flex: 1;
+    padding: 1em;
 
 
-/*ALGORITHMS*/
+}
+
+.algorithms-body {
+    height: 850px;
+}
 
 .container-fluid h1 {
 
@@ -299,4 +261,107 @@ html {
     display: inline-block;
     font-size: 16px;
 
+}
+
+.btn-outline-secondary {
+
+    margin-left: 140px;
+    margin-right: 140px;
+
+}
+
+/*accordion*/
+
+.Stack,
+.Queue,
+.BinarySearchTree,
+.LinkedList {
+    background: rgba(21, 151, 53, 0.3);
+    background: #f7f7f9;
+
+  
+    margin-bottom: 100px;
+    /* margin-top:100px; */
+}
+
+.accordion h2 {
+    text-align: center;
+
+}
+
+
+.accordion button {
+    font-size: 1em;
+
+}
+
+.algorithm-card {
+    min-height: 1000px;
+}
+
+/*.circle {
+    width: 150%;
+    height: 50px;
+    padding-bottom: 90%;
+    margin: auto;
+  float: center;
+    border-radius: 50%;
+    border: 1px solid rgb(82, 194, 228);
+    background: rgb(221, 208, 210);
+  }
+*/
+.circle {
+    display: inline-block;
+  
+    margin: 20px;
+    width: 50x;
+    height: 120px;
+  border-radius: 50%;
+  box-sizing: border-box;
+    border: 3px solid #3ed4ee;
+    padding: 10px;
+  }
+  
+
+
+
+
+.headings {
+    margin-bottom: 50px;
+}
+
+.headings h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+
+
+/**--FOOTER--**/
+.footersection {
+  /*  background-color:#b6f1ea; */
+    background-color: rgba(0, 168, 255, 0.3);
+    padding: 2rem 0 2rem;
+    margin-top: 500px;
+}
+
+.footerscetion img {
+    box-align: center;
+    align-self: center;
+    vertical-align: center;
+    border: 0rem;
+}
+
+.footersection a {
+    color: rgb(70, 156, 236);
+}
+
+.footersection i {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 1.2rem .5rem 0 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
