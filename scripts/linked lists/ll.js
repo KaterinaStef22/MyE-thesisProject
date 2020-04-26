@@ -191,19 +191,48 @@ function runAdd() {
 
 }
 
-
-
-
+function whiteTheTable(){
+    for(let i=0; i<10; i++){
+        document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor = "white";
+    }
+}
 
 function runRemove() {
+    whiteTheTable();
+    for (let i = 0; i < myList.size(); i++) {
+        document.querySelector(`[ll_cell_value='${i}']`).innerHTML = "";
+    }
+
+    let inputValue = document.getElementById("linkedlisttext").value;
+    myList.remove(inputValue);
+    console.log("List Here before reverse " + myList.printList());
+    reverseList = reverseArray(myList.printList());
+    console.log("List Here after reverse " + reverseList);
+
    
+    for (let i = 0; i <= reverseList.length; i++) {
+        if (!(reverseList[i] === undefined)) {
+            let text = document.createTextNode(reverseList[i]);
+            document.querySelector(`[ll_cell_value='${i}']`).appendChild(text);
+        }
+        
+    }
+    disableAdd(); 
 }
 
 function runSearch() {
-
+    let inputValue=document.getElementById("linkedlisttext").value;
+    
+    if(myList.size()>0){
+        let index= reverseList.indexOf(inputValue)
+        console.log("Here is tthe index " + index +"of the inoput value "+inputValue)
+        whiteTheTable();
+        document.querySelector(`[ll_cell_id='${index}']`).style.backgroundColor = "lightgreen";
+    }
+    
 }
 
-/*function runClearList(){
+function runClearList(){
     console.log("size before while:" + myList.size())
     while (myList.size()>= 0) {
         console.log("size after while before removeAt:" + myList.size())
@@ -211,20 +240,23 @@ function runSearch() {
         if(myList.size()<1){
             document.querySelector(`[ll_cell_value='${0}']`).innerHTML = "";
         }else{
-            document.querySelector(`[ll_queue_cell_value='${myList.size()-1}']`).innerHTML = "";
+            document.querySelector(`[ll_cell_value='${myList.size()-1}']`).innerHTML = "";
         }
         
         if (myList.size() === 0) {
             break;
         }
-        myList.removeAt(myList.size());
+        myList.removeAt(myList.size()-1);
         console.log("size after while after removeAt:" + myList.size())
 
     }
     disableAdd();
 
 }
-*/
+
+
+
+
 
 document.getElementById("add").addEventListener("click", () => {
     console.log("Add Button Clicked");

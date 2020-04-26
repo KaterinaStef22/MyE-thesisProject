@@ -279,7 +279,7 @@ ul {
     background: rgba(21, 151, 53, 0.3);
     background: #f7f7f9;
 
-    padding: 200px 0;
+  
     margin-bottom: 100px;
     /* margin-top:100px; */
 }
@@ -335,11 +335,11 @@ ul {
     font-weight: 600;
 
 }
-*/
+
 
 /**--FOOTER--**/
 .footersection {
-    /*background-color:#b6f1ea;*/
+  /*  background-color:#b6f1ea; */
     background-color: rgba(0, 168, 255, 0.3);
     padding: 2rem 0 2rem;
     margin-top: 500px;

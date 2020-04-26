@@ -210,7 +210,7 @@ class Node {
   
   
 
-/*const bst=new BST();
+const bst=new BST();
 bst.insert(22);
 bst.insert(14);
 bst.insert(6);
@@ -234,7 +234,7 @@ console.log('postOrder: ' + bst.postOrder());
 
 //console.log('levelOrder: ' + bst.levelOrder());
 
- */ 
+
 document.getElementById("insert").addEventListener("click", ()=>{
   console.log("Insert Button Clicked");
   bst.insert(document.getElementById("binarytreetext").value);
