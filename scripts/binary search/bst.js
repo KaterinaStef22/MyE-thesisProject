@@ -210,6 +210,36 @@ class Node {
   
   
 
+
+//console.log('levelOrder: ' + bst.levelOrder());
+function runInsert(){
+
+}
+
+function runDelete(){
+
+}
+
+function runFind(){
+
+}
+
+document.getElementById("insert").addEventListener("click", ()=>{
+  console.log("Insert Button Clicked");
+  bst.insert(document.getElementById("binarytreetext").value);
+});
+
+document.getElementById("delete").addEventListener("click", ()=>{
+console.log("Delete Button Clicked");
+bst.delete(document.getElementById("binarytreetext").value);
+});
+
+document.getElementById("find").addEventListener("click", ()=>{
+console.log("Find Button Clicked");
+
+});
+
+/*
 const bst=new BST();
 bst.insert(22);
 bst.insert(14);
@@ -231,22 +261,4 @@ console.log(bst.isBalanced());
 console.log('inOrder: ' + bst.inOrder());
 console.log('preOrder: ' + bst.preOrder());
 console.log('postOrder: ' + bst.postOrder());
-
-//console.log('levelOrder: ' + bst.levelOrder());
-
-
-document.getElementById("insert").addEventListener("click", ()=>{
-  console.log("Insert Button Clicked");
-  bst.insert(document.getElementById("binarytreetext").value);
-});
-
-document.getElementById("delete").addEventListener("click", ()=>{
-console.log("Delete Button Clicked");
-bst.delete(document.getElementById("binarytreetext").value);
-});
-
-document.getElementById("find").addEventListener("click", ()=>{
-console.log("Find Button Clicked");
-
-});
-
+*/

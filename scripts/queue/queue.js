@@ -151,7 +151,7 @@ function runEnqueue() {
     }
 
     if (myQueue.size() !== 0) {
-        document.querySelector(`[queue_cell_id='${myQueue.size()-1}']`).style.backgroundColor = "white";
+        document.querySelector(`[queue_cell_id='${myQueue.size()-1}']`).style.backgroundColor="lightgreen";
     }
 }
 
