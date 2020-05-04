@@ -180,20 +180,20 @@ function runAdd() {
         myList.add(inputValue);
         document.querySelector(`[ll_cell_value='${0}']`).innerHTML = "";
         document.querySelector(`[ll_cell_value='${0}']`).appendChild(text);
-        document.querySelector(`[ll_cell_id='${0}']`).style.backgroundColor = "lightgreen"
+        document.querySelector(`[ll_cell_id='${0}']`).style.backgroundColor= "lightgreen";
         console.log(inputValue + " " + myList.size());
         shiftLinkedListTable();
     }
 
     if (myList.size() !== 0 && myList.size()>1) {
-        document.querySelector(`[ll_cell_id='${myList.size()-1}']`).style.backgroundColor = "white";
+        document.querySelector(`[ll_cell_id='${myList.size()-1}']`).style.backgroundColor="lightgreen";
     }
 
 }
 
 function whiteTheTable(){
     for(let i=0; i<10; i++){
-        document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor = "white";
+        document.querySelector(`[ll_cell_id='${i}']`).backgroundColor= "white";
     }
 }
 
@@ -227,7 +227,7 @@ function runSearch() {
         let index= reverseList.indexOf(inputValue)
         console.log("Here is tthe index " + index +"of the inoput value "+inputValue)
         whiteTheTable();
-        document.querySelector(`[ll_cell_id='${index}']`).style.backgroundColor = "lightgreen";
+        document.querySelector(`[ll_cell_id='${index}']`).style.backgroundColor= "red";
     }
     
 }

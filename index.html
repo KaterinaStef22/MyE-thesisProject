@@ -35,16 +35,16 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#algorithms" id=Stack >Stack</a>
+              <a class="nav-link" href="#stackdiv">Stack</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#algorithms">Queue</a>
+              <a class="nav-link" href="#queuediv">Queue</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#algorithms">Linked list</a>
+              <a class="nav-link" href="#lldiv">Linked list</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#algorithms">Binary Tree</a>
+              <a class="nav-link" href="#bstdiv">Binary Tree</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#footerdiv">ABOUT</a>
@@ -56,22 +56,23 @@
   </div>
 
 
-    <!--STRUCTURES !!!!!!!!!!!!!!!!!!!-->
-    <section class="structures" id="structures">
-     
-      <div class="container-fluid padding ">
-        <div class="row welcome text-center">
+  <!--STRUCTURES !!!!!!!!!!!!!!!!!!!-->
+  <section class="structures" id="structures">
+
+    <div class="container-fluid padding ">
+      <div class="row welcome text-center">
       </div>
-      </div>
-      <div class="container-fluid padding manuals row1">
-        <div class="row padding  ">
+    </div>
+    <div class="container-fluid padding manuals row1">
+      <div class="row padding  ">
         <div class="card ">
-            <div class="card-body algorithms-body">
-         
-              <h3 class="card-tittle">Data Structures</h3>
-              <div class="row">
+          <div class="card-body algorithms-body">
+
+            <h3 class="card-tittle">Data Structures</h3>
+            <div class="row">
               <div class="col-md-6">
-                <p>In computer terms, a data structure is a Specific way to store and organize data in a computer's memory so that these
+                <p>In computer terms, a data structure is a Specific way to store and organize data in a computer's
+                  memory so that these
                   data can be used efficiently later.
                   Data may be arranged in many different ways,
                   such as the logical or mathematical model for a
@@ -89,118 +90,407 @@
                 <img src="images/datastructures1.png">
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="row padding  ">
+        <div class="card ">
+          <div class="card-body algorithms-body">
+            <h3 class="card-tittle">Array Data Structures</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <p>An array is a collection of items stored at contiguous memory locations.
+                  The idea is to store multiple items of the same type together. This makes it easier to
+                  calculate the position of each element by simply adding an offset to a base value, i.e.,
+                  the memory location of the first element of the array (generally denoted by the name of the array).
+                  Array is a container which can hold a fix number of items and these items should be of the same
+                  type. Most of the data structures make use of arrays to implement their algorithms.
+                  Following are the important terms to understand the concept of Array.</p>
+                <ul>
+                  <li>Element − Each item stored in an array is called an element.</li>
+                  <li>Index − Each location of an element in an array has a numerical index, which is used to identify
+                    the element.</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <img src="images/array-2.png">
+              </div>
+
             </div>
+          </div>
+        </div>
+        <div class="row padding  ">
+          <div class="card  ">
+            <div class="card-body algorithms-body ">
+              <h3 class="card-tittle">Linked List Data Structures</h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <p>A linked list is a sequence of data structures, which are connected together via links.
+                    Linked List is a sequence of links which contains items. Each link contains a connection to
+                    another link. Linked list is the second most-used data structure after array. Following are the
+                    important terms to understand the concept of Linked List.</p>
+                  <ul>
+                    <li>Link − Each link of a linked list can store a data called an element.</li>
+                    <li>Next − Each link of a linked list contains a link to the next link called Next.</li>
+                    <li>LinkedList − A Linked List contains the connection link to the first link called First.</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <img src="images/Singly-linked-list.png">
+                </div>
+              </div>
             </div>
-            <div class="row padding  ">
-              <div class="card ">
-                  <div class="card-body algorithms-body">
-                    <h3 class="card-tittle">Array Data Structures</h3>
-                    <div class="row">
-                      <div class="col-md-6">
-                   <p>An array is a collection of items stored at contiguous memory locations. 
-                     The idea is to store multiple items of the same type together. This makes it easier to 
-                     calculate the position of each element by simply adding an offset to a base value, i.e., 
-                     the memory location of the first element of the array (generally denoted by the name of the array).
-                     Array is a container which can hold a fix number of items and these items should be of the same type. Most of the data structures make use of arrays to implement their algorithms. 
-                     Following are the important terms to understand the concept of Array.</p>
-                       <ul>
-                         <li>Element − Each item stored in an array is called an element.</li>
-                         <li>Index − Each location of an element in an array has a numerical index, which is used to identify the element.</li>
-                      </ul>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--ALGORITHMS LITTLE WORDS STARTS -->
+  <!--https://www.studytonight.com/data-structures/introduction-to-binary-trees--->
+  <!--<section class="algorithms" id="algorithms">
+    <div class="container-fluid padding ">
+      <div class="row welcome text-center">
+
+
+        <div class="col-12">
+          <h1 class="display-4">Introduction to algorithms</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid padding manuals row1">
+      <div class="row padding  ">
+
+        <div class="col-md-3 col1 col-sm-6">
+          <div class="card ">
+            <div class="card-body algorithms-body">
+              <h3 class="card-tittle">Stack</h3>
+              <p1>Littel words:</p1>
+              <p class="card-text">
+                Stack is an abstract data type with
+                a bounded(predefined) capacity. It is a simple data
+                structure that allows adding and removing elements in
+                a particular order. Every time an element is added,
+                it goes on the top of the stack and the only element that
+                can be removed is the element that is at the top of the stack,
+                just like a pile of objects.</p>
+              <p1>Basic features of Stack:</p1>
+              <ol>
+                <li> 1.Stack is an ordered list of similar data type.</li>
+                <li>2.push() function is used to insert new elements into the Stack and pop()
+                  function is used to remove an element from the stack. Both insertion
+                  and removal are allowed at only one end of Stack called Top.</li>
+              </ol>
+              <img class="card-imd-top" src="">
+            </div>
+            <div class="card-footer">
+              <a href="#stackdiv" class="btn btn-outline-secondary">Stack</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-3 col1 col-sm-6">
+          <div class="card ">
+            <div class="card-body algorithms-body">
+              <h3 class="card-tittle">Queue</h3>
+              <p class="card-text">
+                Queue is also an abstract data type or a linear data structure,
+                just like stack data structure, in which the first element is
+                inserted from one end called the REAR(also called tail),
+                and the removal of existing element takes place from
+                the other end called as FRONT(also called head).
+                This makes queue as FIFO(First in First Out) data structure,
+                which means that element inserted first will be removed first. </p>
+              <p1>Basic features of Queue:</p1>
+              <ol>
+                <li> 1.Like stack, queue is also an ordered list of elements of similar data types.Queue is a
+                  FIFO( First in First Out ) structure.</li>
+                <li>2.peek()function is oftenly used to return the value of first element without dequeuing
+                  it.</li>
+              </ol>
+              <img class="card-imd-top" src="">
+            </div>
+            <div class="card-footer">
+
+              <a href="#queuediv" class="btn btn-outline-secondary">Queue</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-3 col1 col-sm-6">
+          <div class="card  ">
+            <div class="card-body algorithms-body ">
+              <h3 class="card-tittle">Linked list</h3>
+              <p class="card-text">
+                Linked List is a very commonly used linear data structure
+                which consists of group of nodes in a sequence.
+                Each node holds its own data
+                and the address of the next node hence forming a chain like structure.
+                Linked Lists are used to create trees and graphs.
+              </p>
+              <p1>The concept of Linked List:</p1>
+              <ol>
+                <li> 1.Link − Each link of a linked list can store a data called an element.
+                </li>
+                <li>2.Next − Each link of a linked list contains a link to the next link called Next.</li>
+                <li>3.LinkedList − A Linked List contains the connection link to the first link called First.
+                </li>
+              </ol>
+              <img class="card-imd-top" src="">
+            </div>
+            <div class="card-footer">
+              <a href="#lldiv" class="btn btn-outline-secondary">LL</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col1 col-sm-6">
+          <div class="card ">
+            <div class="card-body algorithms-body ">
+              <h3 class="card-tittle">Binary Tree</h3>
+              <p class="card-text">
+                A binary tree is a hierarchical data structure
+                in which each node has at most two children
+                generally referred as left child and right child. </p>
+              <p1>Each node contains three components:</p1>
+              <ol>
+                <li>1.Pointer to left subtree</li>
+                <li>2.Pointer toright subtree</li>
+                <li>3.Data elemennt</li>
+              </ol>
+              <p class="card-text">
+                <p1>Binary Tree: Common Terminologies</p1>
+                <u.>
+                  <li>Root: Topmost node in a tree.</li>
+                  <li>Parent: Every node (excluding a root) in a tree is connected by a directed edge from
+                    exactly one other node. This node is called a parent.</li>
+                  <li>Child: A node directly connected to another node when moving away from the root</li>
+                </u.>
+              </p>
+              <img class="card-imd-top" src="">
+            </div>
+            <div class="card-footer">
+              <a href="#bstdiv" class="btn btn-outline-secondary">BT</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+-->
+
+
+
+
+
+
+
+  <!--ALGORITH ACCORDION-->
+
+  <div class="accordion" id="accordionExample">
+    <div class="card" id="stackdiv">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Stack Array Implementation
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="card-body algorithm-card">
+            <div class="Stack" id="stack">
+              <div class="containerNew headings text-center">
+                <p class="text-center"></p>
+              </div>
+              <div class="container">
+                <div class="row padding  ">
+                  <div class="card ">
+                    <div class="card-body algorithms-body">
+                      <h3 class="card-tittle">Stack</h3>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p1>Littel words:</p1>
+                          <p class="card-text">
+                            Stack is an abstract data type with
+                            a bounded(predefined) capacity. It is a simple data
+                            structure that allows adding and removing elements in
+                            a particular order. Every time an element is added,
+                            it goes on the top of the stack and the only element that
+                            can be removed is the element that is at the top of the stack,
+                            just like a pile of objects.</p>
+                          <p1>Basic features of Stack:</p1>
+                          <ol>
+                            <li> 1.Stack is an ordered list of similar data type.</li>
+                            <li>2.push() function is used to insert new elements into the Stack and pop()
+                              function is used to remove an element from the stack. Both insertion
+                              and removal are allowed at only one end of Stack called Top.</li>
+                          </ol>
+                        </div>
                       </div>
-                      <div class="col-md-6">
-                        <img src="images/array-2.png">
-                      </div>
-          
                     </div>
                   </div>
-                  <div class="row padding  ">
-                  <div class="card  ">
-                      <div class="card-body algorithms-body ">
-                        <h3 class="card-tittle">Linked List Data Structures</h3>
-                        <div class="row">
-                          <div class="col-md-6">
-                       <p>A linked list is a sequence of data structures, which are connected together via links.
-                           Linked List is a sequence of links which contains items. Each link contains a connection to another link. Linked list is the second most-used data structure after array. Following are the important terms to understand the concept of Linked List.</p>
-                           <ul>
-                             <li>Link − Each link of a linked list can store a data called an element.</li>
-                             <li>Next − Each link of a linked list contains a link to the next link called Next.</li>
-                              <li>LinkedList − A Linked List contains the connection link to the first link called First.</li>
-                           </ul>
-                          </div>
-                          <div class="col-md-6">
-                            <img src="images/Singly-linked-list.png">
-                          </div>
-           </div>
-           </div>
-           </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-10 col-10 offset-1  offset-lg-0; ">
+                    <div class="name my-3">
+                      <table class="table">
+                        <thead class="thead-dark">
+                          <td>
+                            <input type="Text" id="stacktext" value name size="6">
+                          </td>
+                          <td>
+                            <button class="btn btn-primary" type="submit" id="push">Push</button>
+                          </td>
+                          <td>
+                            <button class="btn btn-primary" type="submit" id="pop">Pop</button>
+                          </td>
+                          <td>
+                            <button class="btn btn-primary" type="submit" id="clearstack">Clear Stack</button>
+                          </td>
 
-           </div>
-           </div>
-           </div>
-           </div>
-
-           </section>
-        
-        
-        
-        
-   
-         
-                
-            
-          
-         
-
-
-            <!--ALGORITHMS LITTLE WORDS STARTS -->
-            <!--https://www.studytonight.com/data-structures/introduction-to-binary-trees--->
-            <section class="algorithms" id="algorithms">
-              <div class="container-fluid padding ">
-                <div class="row welcome text-center">
-                  
-
-                  <div class="col-12">
-                    <h1 class="display-4">Introduction to algorithms</h1>
+                        </thead>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="container-fluid padding manuals row1">
-                <div class="row padding  ">
-                 
-                  <div class="col-md-3 col1  ">
-                    <div class="card ">
-                      <div class="card-body algorithms-body">
-                        <h3 class="card-tittle">Stack</h3>
-                        <p1>Littel words:</p1>
-                        <p class="card-text">
-                          Stack is an abstract data type with
-                          a bounded(predefined) capacity. It is a simple data
-                          structure that allows adding and removing elements in
-                          a particular order. Every time an element is added,
-                          it goes on the top of the stack and the only element that
-                          can be removed is the element that is at the top of the stack,
-                          just like a pile of objects.</p>
-                        <p1>Basic features of Stack:</p1>
-                        <ol>
-                          <li> 1.Stack is an ordered list of similar data type.</li>
-                          <li>2.push() function is used to insert new elements into the Stack and pop()
-                            function is used to remove an element from the stack. Both insertion
-                            and removal are allowed at only one end of Stack called Top.</li>
-                        </ol>
-                        <img class="card-imd-top" src="">
-                      </div> 
-                      <div class="card-footer">
-                        <a href="#stackdiv" class="btn btn-outline-secondary">Stack</a>
-                        </div>
-                     
+            </div>
+            <div id="stack_container" class="container-fluid" align="center">
+              <table>
+                <tr>
+                  <td>
+                    <div class="col-sm with-number square" stack_cell_id="9">
+                      <div class="index">9</div>
+                      <hr>
+                      <div class="value content" stack_cell_value="9"></div>
                     </div>
+                  </td>
+                </tr>
+                <td>
+                  <div class="col-sm with-number square" stack_cell_id="8">
+                    <div class="index">8</div>
+                    <hr>
+                    <div class="value content" stack_cell_value="8"></div>
                   </div>
-                  <div class="col-md-3 col1  ">
-                    <div class="card ">
-                      <div class="card-body algorithms-body">
-                        <h3 class="card-tittle">Queue</h3>
-                        <p class="card-text">
+                </td>
+                <tr>
+                  <td>
+                    <div class="col-sm with-number square" stack_cell_id="7">
+                      <div class="index">7</div>
+                      <hr>
+                      <div class="value content" stack_cell_value="7"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="col-sm with-number square" stack_cell_id="6">
+                      <div class="index">6</div>
+                      <hr>
+                      <div class="value content" stack_cell_value="6"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="col-sm with-number square" stack_cell_id="5">
+                      <div class="index">5</div>
+                      <hr>
+                      <div class="value content" stack_cell_value="5"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="col-sm with-number square" stack_cell_id="4">
+                      <div class="index">4</div>
+                      <hr>
+                      <div class="value content" stack_cell_value="4"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="col-sm with-number square" stack_cell_id="3">
+                      <div class="index">3</div>
+                      <hr>
+                      <div class="value content" stack_cell_value="3"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="col-sm with-number square" stack_cell_id="2">
+                      <div class="index">2</div>
+                      <hr>
+                      <div class="value content" stack_cell_value="2"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="col-sm with-number square" stack_cell_id="1">
+                      <div class="index">1</div>
+                      <hr>
+                      <div class="value content " stack_cell_value="1"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="col-sm with-number square" stack_cell_id="0">
+                      <div class="index">0</div>
+                      <hr>
+                      <div class="value content" stack_cell_value="0"></div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="queuediv">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Queue Array Implementation
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="Queue" id="#queuediv">
+              <div class="containerNew headings text-center">
+
+                <p class="text-center"></p>
+              </div>
+              <div class="container">
+                <div class="row padding  ">
+                  <div class="card ">
+                    <div class="card-body algorithms-body">
+
+                      <h3 class="card-tittle">Queue</h3>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p1>Littel words:</p1>
                           Queue is also an abstract data type or a linear data structure,
                           just like stack data structure, in which the first element is
                           inserted from one end called the REAR(also called tail),
@@ -208,684 +498,460 @@
                           the other end called as FRONT(also called head).
                           This makes queue as FIFO(First in First Out) data structure,
                           which means that element inserted first will be removed first. </p>
-                        <p1>Basic features of Queue:</p1>
-                        <ol>
-                          <li> 1.Like stack, queue is also an ordered list of elements of similar data types.Queue is a
-                            FIFO( First in First Out ) structure.</li>
-                          <li>2.peek()function is oftenly used to return the value of first element without dequeuing
-                            it.</li>
-                        </ol>
-                        <img class="card-imd-top" src="">
-                      </div>
-                        <div class="card-footer">
+                          <p1>Basic features of Queue:</p1>
+                          <ol>
+                            <li> 1.Like stack, queue is also an ordered list of elements of similar data types.Queue is
+                              a
+                              FIFO( First in First Out ) structure.</li>
+                            <li>2.peek()function is oftenly used to return the value of first element without dequeuing
+                              it.</li>
+                          </ol>
 
-                          <a href="#queuediv" class="btn btn-outline-secondary">Queue</a>
                         </div>
-                      
-                    </div>
-                  </div>
-                  <div class="col-md-3 col1 ">
-                    <div class="card  ">
-                      <div class="card-body algorithms-body ">
-                        <h3 class="card-tittle">Linked list</h3>
-                        <p class="card-text">
-                          Linked List is a very commonly used linear data structure
-                          which consists of group of nodes in a sequence.
-                          Each node holds its own data
-                          and the address of the next node hence forming a chain like structure.
-                          Linked Lists are used to create trees and graphs.
-                        </p>
-                        <p1>The concept of Linked List:</p1>
-                        <ol>
-                          <li> 1.Link − Each link of a linked list can store a data called an element.
-                          </li>
-                          <li>2.Next − Each link of a linked list contains a link to the next link called Next.</li>
-                          <li>3.LinkedList − A Linked List contains the connection link to the first link called First.
-                          </li>
-                        </ol>
-                        <img class="card-imd-top" src="">
+
                       </div>
-                        <div class="card-footer"> 
-                           <a href="#lldiv" class="btn btn-outline-secondary">LL</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-3 col1 ">
-                    <div class="card ">
-                      <div class="card-body algorithms-body ">
-                        <h3 class="card-tittle">Binary Tree</h3>
-                        <p class="card-text">
-                          A binary tree is a hierarchical data structure
-                          in which each node has at most two children
-                          generally referred as left child and right child. </p>
-                        <p1>Each node contains three components:</p1>
-                        <ol>
-                          <li>1.Pointer to left subtree</li>
-                          <li>2.Pointer toright subtree</li>
-                          <li>3.Data elemennt</li>
-                        </ol>
-                        <p class="card-text">
-                          <p1>Binary Tree: Common Terminologies</p1>
-                          <u.>
-                            <li>Root: Topmost node in a tree.</li>
-                            <li>Parent: Every node (excluding a root) in a tree is connected by a directed edge from
-                              exactly one other node. This node is called a parent.</li>
-                            <li>Child: A node directly connected to another node when moving away from the root</li>
-                          </u.>
-                        </p>
-                        <img class="card-imd-top" src="">
-                      </div>
-                        <div class="card-footer">
-                          <a href="#bstdiv" class="btn btn-outline-secondary">BT</a>
-                        </div>
-                      
                     </div>
                   </div>
                 </div>
-              </div>
-            </section>
 
-
-
-
-
-
-
-
-
-
-<!--ALGORITH ACCORDION-->
-     
-            <div class="accordion" id="accordionExample">
-              <div class="card"id="stackdiv">
-                <div class="card-header" id="headingOne">
-                  <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                      aria-expanded="true" aria-controls="collapseOne">
-                      Stack Array Implementation
-                    </button>
-                  </h2>
-                </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body">
-                    <div class="card-body algorithm-card">
-                    <div class="Stack" >
-                      <div class="containerNew headings text-center">
-                        <p class="text-center"></p>
-                      </div>
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-lg-10 col-10 offset-1  offset-lg-0; ">
-                            <div class="name my-3">
-                              <table class="table">
-                                <thead class="thead-dark">
-                                  <td>
-                                    <input type="Text" id="stacktext" value name size="6">
-                                  </td>
-                                  <td>
-                                    <button class="btn btn-primary" type="submit" id="push">Push</button>
-                                  </td>
-                                  <td>
-                                    <button class="btn btn-primary" type="submit" id="pop">Pop</button>
-                                  </td>
-                                  <td>
-                                    <button class="btn btn-primary" type="submit" id="clearstack">Clear Stack</button>
-                                  </td>
-
-                                </thead>
-                              </table>
-
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="stack_container" class="container-fluid" align="center">
-                      <table>
-                        <tr>
+                <div class="row">
+                  <div class="col-lg-10 col-10 offset-1  offset-lg-0; ">
+                    <div class="name my-3">
+                      <table class="table">
+                        <thead class="thead-dark">
                           <td>
-                            <div class="circle">
-                            <div class="col-sm with-number" stack_cell_id="9">
-                              <div class="index">9</div>
-                              <hr>
-                              <div class="value" stack_cell_value="9"></div>
-                            </div>
-                          </div>
+                            <input type="Text" id="queuetext" value name size="6">
                           </td>
-                        </tr>
-                        <td>
-                          <div class="circle">
-                          <div class="col-sm with-number" stack_cell_id="8">
-                            <div class="index">8</div>
-                            <hr>
-                            <div class="value" stack_cell_value="8"></div>
-                          </div>
-                          </div>
-                        </td>
-                        <tr>
                           <td>
-                            <div class="circle">
-                            <div class="col-sm with-number" stack_cell_id="7">
-                              <div class="index">7</div>
-                              <hr>
-                              <div class="value" stack_cell_value="7"></div>
-                            </div>
-                            </div>
+                            <button class="btn btn-primary" type="submit" id="enqueue">Enqueue</button>
                           </td>
-                        </tr>
-                        <tr>
                           <td>
-                            <div class="circle">
-                            <div class="col-sm with-number" stack_cell_id="6">
-                              <div class="index">6</div>
-                              <hr>
-                              <div class="value" stack_cell_value="6"></div>
-                            </div>
-                            </div>
+                            <button class="btn btn-primary" type="submit" id="dequeue">Dequeue</button>
                           </td>
-                        </tr>
-                        <tr>
                           <td>
-                            <div class="circle">
-                            <div class="col-sm with-number" stack_cell_id="5">
-                              <div class="index">5</div>
-                              <hr>
-                              <div class="value" stack_cell_value="5"></div>
-                            </div>
-                            </div>
+                            <button class="btn btn-primary" type="submit" id="clearqueue">Clear Queue</button>
                           </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="circle">
-                            <div class="col-sm with-number" stack_cell_id="4">
-                              <div class="index">4</div>
-                              <hr>
-                              <div class="value" stack_cell_value="4"></div>
-                            </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="circle">
-                            <div class="col-sm with-number" stack_cell_id="3">
-                              <div class="index">3</div>
-                              <hr>
-                              <div class="value" stack_cell_value="3"></div>
-                            </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="circle">
-                            <div class="col-sm with-number" stack_cell_id="2">
-                              <div class="index">2</div>
-                              <hr>
-                              <div class="value" stack_cell_value="2"></div>
-                            </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="circle">
-                            <div class="col-sm with-number" stack_cell_id="1">
-                              <div class="index">1</div>
-                              <hr>
-                              <div class="value" stack_cell_value="1"></div>
-                            </div>
-                            </div>
-                          
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="circle">
-                            <div class="col-sm with-number" stack_cell_id="0">
-                              <div class="index">0</div>
-                              <hr>
-                              <div class="value" stack_cell_value="0"></div>
-                            </div>
-                            </div>
-                          </td>
-                        </tr>
-        
-        
-        
+                        </thead>
                       </table>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-                <div class="card" id="queuediv">
-                  <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Queue Array Implementation
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <div class="Queue" >
-                        <div class="containerNew headings text-center">
 
-                          <p class="text-center"></p>
-                        </div>
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-lg-10 col-10 offset-1  offset-lg-0; ">
-                              <div class="name my-3">
-                                <table class="table">
-                                  <thead class="thead-dark">
-                                    <td>
-                                      <input type="Text" id="queuetext" value name size="6">
-                                    </td>
-                                    <td>
-                                      <button class="btn btn-primary" type="submit" id="enqueue">Enqueue</button>
-                                    </td>
-                                    <td>
-                                      <button class="btn btn-primary" type="submit" id="dequeue">Dequeue</button>
-                                    </td>
-                                    <td>
-                                      <button class="btn btn-primary" type="submit" id="clearqueue">Clear Queue</button>
-                                    </td>
-                                  </thead>
-                                </table>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div id="queue_container" class="container-fluid" align="center">
-                        <!--javascript-->
-                        <table>
-                          <tr>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" queue_cell_id="0">
-                                <div class="index">0</div>
-                                <hr>
-                                <div class="value" queue_cell_value="0"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" queue_cell_id="1">
-                                <div class="index">1</div>
-                                <hr>
-                                <div class="value" queue_cell_value="1"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" queue_cell_id="2">
-                                <div class="index">2</div>
-                                <hr>
-                                <div class="value" queue_cell_value="2"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" queue_cell_id="3">
-                                <div class="index">3</div>
-                                <hr>
-                                <div class="value" queue_cell_value="3"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" queue_cell_id="4">
-                                <div class="index">4</div>
-                                <hr>
-                                <div class="value" queue_cell_value="4"></div>
-                              </div>
-                              <div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" queue_cell_id="5">
-                                <div class="index">5</div>
-                                <hr>
-                                <div class="value" queue_cell_value="5"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" queue_cell_id="6">
-                                <div class="index">6</div>
-                                <hr>
-                                <div class="value" queue_cell_value="6"></div>
-                              </div>
-                              <div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" queue_cell_id="7">
-                                <div class="index">7</div>
-                                <hr>
-                                <div class="value" queue_cell_value="7"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" queue_cell_id="8">
-                                <div class="index">8</div>
-                                <hr>
-                                <div class="value" queue_cell_value="8"> </div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" queue_cell_id="9">
-                                <div class="index">9</div>
-                                <hr>
-                                <div class="value" queue_cell_value="9"></div>
-                              </div>
-                              <div>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                      <!--QUEUE ENDS-->
-                    </div>
-                  </div>
-                </div>
-                <div class="card" id="lldiv" >
-                  <div class="card-header" id="headingThree">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Linked List Implementation
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                    data-parent="#accordionExample">
-                    <div class="card-body">
-                      <div class="LinkedList" >
-                        <div class="containerNew headings text-center">
-
-                          <p class="text-center"></p>
-                        </div>
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-lg-10 col-10 offset-1  offset-lg-0; ">
-                              <div class="name my-3">
-                                <table class="table">
-                                  <thead class="thead-dark">
-                                    <td>
-                                      <input type="Text" id="linkedlisttext" value name size="6">
-                                    </td>
-                                    <td>
-
-                                      <button class="btn btn-primary" type="submit" id="add">Add</button>
-                                    </td>
-                                    <td>
-                                      <button class="btn btn-primary" type="submit" id="remove">Remove</button>
-                                    </td>
-                                    <td>
-                                      <button class="btn btn-primary" type="submit" id="search">Search</button>
-                                    </td>
-                                    <td>
-                                      <button class="btn btn-primary" type="submit" id="clearlist">Clear List</button>
-                                    </td>
-                                  </thead>
-                                </table>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div id="linkedlist_container" class="container-fluid" align="center">
-                        <!--javascript-->
-                        <table>
-                          <tr>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" ll_cell_id="0">
-                                <div class="index">0</div>
-                                <hr>
-                                <div class="value" ll_cell_value="0"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" ll_cell_id="1">
-                                <div class="index">1</div>
-                                <hr>
-                                <div class="value" ll_cell_value="1"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" ll_cell_id="2">
-                                <div class="index">2</div>
-                                <hr>
-                                <div class="value" ll_cell_value="2"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" ll_cell_id="3">
-                                <div class="index">3</div>
-                                <hr>
-                                <div class="value" ll_cell_value="3"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" ll_cell_id="4">
-                                <div class="index">4</div>
-                                <hr>
-                                <div class="value" ll_cell_value="4"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" ll_cell_id="5">
-                                <div class="index">5</div>
-                                <hr>
-                                <div class="value" ll_cell_value="5"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" ll_cell_id="6">
-                                <div class="index">6</div>
-                                <hr>
-                                <div class="value" ll_cell_value="6"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" ll_cell_id="7">
-                                <div class="index">7</div>
-                                <hr>
-                                <div class="value" ll_cell_value="7"></div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" ll_cell_id="8">
-                                <div class="index">8</div>
-                                <hr>
-                                <div class="value" ll_cell_value="8"> </div>
-                              </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="circle">
-                              <div class="col-sm with-number" ll_cell_id="9">
-                                <div class="index">9</div>
-                                <hr>
-                                <div class="value" ll_cell_value="9"></div>
-                              </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card" id="bstdiv" >
-                  <div class="card-header" id="headingThree">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Binary Tree Implementation
-                    </h2>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                    data-parent="#accordionExample">
-                    <div class="card-body">
-                      <div class="BinarySearchTree" >
-                        <div class="containerNew headings text-center">
-
-                          <p class="text-center"></p>
-                        </div>
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-lg-10 col-10 offset-1  offset-lg-0; ">
-                              <div class="name my-3">
-                                <table class="table">
-                                  <thead class="thead-dark">
-                                    <td>
-                                      <input type="Text" id="binarytreetext" value name size="6">
-                                    </td>
-                                    <td>
-
-                                      <button class="btn btn-primary" type="submit" id="insert">Insert</button>
-                                    </td>
-                                    <td>
-                                      <button class="btn btn-primary" type="submit" id="delete">Delete</button>
-                                    </td>
-                                    <td>
-                                      <button class="btn btn-primary" type="submit" id="find">Find</button>
-                                    </td>
-                                  </thead>
-                                </table>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="binary_tree_container" class="container-fluid" align="center">
-
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-              <!-------footer start ------------>
-
-              <section class="footersection" id="footerdiv">
-                <div class="container">
-                  <div clacc="row justify-content-center">
-                    <div class=" col-md-auto text-center">
-                      <img src="images/uni.png">
-                      <p class="text-center"></p>
-                      <p>Development
-                        of an application for
-                        the Implementation
-                        and use of data structures in a visualized environment</p>
-                      <i class="fa fa-university" style="font-size:30px">
-                        International University of Greece</i>
+            <div id="queue_container" class="container-fluid flex-container" align="center">
+              <!--javascript-->
+              <table>
+                <tr>
+                  <td>
+                    <div class="col-sm with-number square" queue_cell_id="0">
+                      <div class="index">0</div>
+                      <hr>
+                      <div class="value content" queue_cell_value="0"></div>
                     </div>
-                    <div class=" col-md-auto text-center">
-                      <p class="text-center"></p>
-                      <i class="fa fa-user" style="font-size:30px"> Professor:
-                        <a href="http://teachers.teicm.gr/outsios/index.html">Evangelos Outsios</a></i>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" queue_cell_id="1">
+                      <div class="index">1</div>
+                      <hr>
+                      <div class="value content" queue_cell_value="1"></div>
                     </div>
-                    <div class=" col-md-auto text-center">
-                      <p class="text-center"></p>
-                      <i class="fa fa-graduation-cap" style="font-size:30px">Student:
-                        Aikaterini Stefanidou</i>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" queue_cell_id="2">
+                      <div class="index">2</div>
+                      <hr>
+                      <div class="value content" queue_cell_value="2"></div>
                     </div>
-                    <div class=" col-md-auto text-center">
-                      <p class="text-center"></p>
-                      <i class="fa fa-id-card" style="font-size:30px">
-                        4111</i>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" queue_cell_id="3">
+                      <div class="index">3</div>
+                      <hr>
+                      <div class="value content" queue_cell_value="3"></div>
                     </div>
-                    <div class=" col-md-auto text-center">
-                      <p class="text-center"></p>
-                      <i class="fa fa-link" style="font-size:30px">
-                        <a href="">Github</a></i>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" queue_cell_id="4">
+                      <div class="index">4</div>
+                      <hr>
+                      <div class="value content" queue_cell_value="4"></div>
                     </div>
-                    <div class=" col-md-auto text-center">
-                      <p class="text-center"> </p>
-                      <i class="fa fa-user-circle-o" style="font-size:30px"> Links:
-                        <a href=""> <i class="fa fa-linkedin" style="font-size: 30px; color: #00008b"></i></a>
-                        <a href="https://www.facebook.com"> <i class="fa fa-facebook"
-                            style="font-size: 30px; color: #0000ff"></i></a>
-                        <a href=""> <i class="fa fa-github" style="font-size: 30px; color: #000000"></i> </a></i>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" queue_cell_id="5">
+                      <div class="index">5</div>
+                      <hr>
+                      <div class="value content" queue_cell_value="5"></div>
                     </div>
-                    <div class=" col-md-auto text-center">
-                      <p class="text-center"></p>
-                      <i class="fa fa-copyright" style="font-size:30px">
-                        Aikaterini Stefanidou 2020</i>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" queue_cell_id="6">
+                      <div class="index">6</div>
+                      <hr>
+                      <div class="value content" queue_cell_value="6"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" queue_cell_id="7">
+                      <div class="index">7</div>
+                      <hr>
+                      <div class="value content" queue_cell_value="7"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" queue_cell_id="8">
+                      <div class="index">8</div>
+                      <hr>
+                      <div class="value content" queue_cell_value="8"> </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" queue_cell_id="9">
+                      <div class="index">9</div>
+                      <hr>
+                      <div class="value content" queue_cell_value="9"></div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!--QUEUE ENDS-->
+          </div>
+        </div>
+      </div>
+      <div class="card" id="lldiv">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              Linked List Implementation
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="LinkedList" id="#lldiv">
+              <div class="containerNew headings text-center">
+
+                <p class="text-center"></p>
+              </div>
+              <div class="container">
+                <div class="row padding  ">
+                  <div class="card ">
+                    <div class="card-body algorithms-body">
+
+                      <h3 class="card-tittle">Linked List</h3>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p1>Littel words:</p1>
+                          <p class="card-text">
+                            Linked List is a very commonly used linear data structure
+                            which consists of group of nodes in a sequence.
+                            Each node holds its own data
+                            and the address of the next node hence forming a chain like structure.
+                            Linked Lists are used to create trees and graphs.
+                          </p>
+                          <p1>The concept of Linked List:</p1>
+                          <ol>
+                            <li> 1.Link − Each link of a linked list can store a data called an element.
+                            </li>
+                            <li>2.Next − Each link of a linked list contains a link to the next link called Next.</li>
+                            <li>3.LinkedList − A Linked List contains the connection link to the first link called
+                              First.
+                            </li>
+                          </ol>
+
+                        </div>
+
+                      </div>
                     </div>
                   </div>
                 </div>
-              </section>
+                <div class="row">
+                  <div class="col-lg-10 col-10 offset-1  offset-lg-0; ">
+                    <div class="name my-3">
+                      <table class="table">
+                        <thead class="thead-dark">
+                          <td>
+                            <input type="Text" id="linkedlisttext" value name size="6">
+                          </td>
+                          <td>
+
+                            <button class="btn btn-primary" type="submit" id="add">Add</button>
+                          </td>
+                          <td>
+                            <button class="btn btn-primary" type="submit" id="remove">Remove</button>
+                          </td>
+                          <td>
+                            <button class="btn btn-primary" type="submit" id="search">Search</button>
+                          </td>
+                          <td>
+                            <button class="btn btn-primary" type="submit" id="clearlist">Clear List</button>
+                          </td>
+                        </thead>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div id="linkedlist_container" class="container-fluid" align="center">
+              <!--javascript-->
+              <table>
+                <tr>
+                  <td>
+                    <!-- <div class="square"> -->
+                    <div class="col-sm with-number square" ll_cell_id="0">
+                      <div class="index">0</div>
+                      <hr>
+                      <!-- <div class="content"> -->
+                      <div class="value content" ll_cell_value="0"></div>
+                      <!-- </div> -->
+                    </div>
+                    <!-- </div> -->
+                  </td>
+                  <td>
+                    <div class="col-sm with-number  square" ll_cell_id="1">
+                      <div class="index">1</div>
+                      <hr>
+                      <div class="valuecontent " ll_cell_value="1"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" ll_cell_id="2">
+                      <div class="index">2</div>
+                      <hr>
+                      <div class="value content" ll_cell_value="2"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" ll_cell_id="3">
+                      <div class="index">3</div>
+                      <hr>
+                      <div class="value content" ll_cell_value="3"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" ll_cell_id="4">
+                      <div class="index">4</div>
+                      <hr>
+                      <div class="value content" ll_cell_value="4"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" ll_cell_id="5">
+                      <div class="index">5</div>
+                      <hr>
+                      <div class="value content" ll_cell_value="5"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" ll_cell_id="6">
+                      <div class="index">6</div>
+                      <hr>
+                      <div class="value content" ll_cell_value="6"></div>
+                      </di>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" ll_cell_id="7">
+                      <div class="index">7</div>
+                      <hr>
+                      <div class="value content" ll_cell_value="7"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" ll_cell_id="8">
+                      <div class="index">8</div>
+                      <hr>
+                      <div class="value content" ll_cell_value="8"> </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" ll_cell_id="9">
+                      <div class="index">9</div>
+                      <hr>
+                      <div class="value content" ll_cell_value="9"></div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
         </div>
+      </div>
+
+
+      <div class="card" id="bstdiv">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              Binary Tree Implementation
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse " aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="BinarySearchTree" id="#bstdiv">
+              <div class="containerNew headings text-center">
+
+                <p class="text-center"></p>
+              </div>
+              <div class="container">
+                <div class="row padding  ">
+                  <div class="card ">
+                    <div class="card-body algorithms-body">
+
+                      <h3 class="card-tittle">Binary Tree</h3>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p1>Littel words:</p1>
+                          <p class="card-text">
+                            A binary tree is a hierarchical data structure
+                            in which each node has at most two children
+                            generally referred as left child and right child. </p>
+                          <p1>Each node contains three components:</p1>
+                          <ol>
+                            <li>1.Pointer to left subtree</li>
+                            <li>2.Pointer toright subtree</li>
+                            <li>3.Data elemennt</li>
+                          </ol>
+                          <p class="card-text">
+                            <p1>Binary Tree: Common Terminologies</p1>
+                            <u.>
+                              <li>Root: Topmost node in a tree.</li>
+                              <li>Parent: Every node (excluding a root) in a tree is connected by a directed edge from
+                                exactly one other node. This node is called a parent.</li>
+                              <li>Child: A node directly connected to another node when moving away from the root</li>
+                            </u.>
+                          </p>
+
+                          </ol>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-10 col-10 offset-1  offset-lg-0; ">
+                    <div class="name my-3">
+                      <table class="table">
+                        <thead class="thead-dark">
+                          <td>
+                            <input type="Text" id="binarytreetext" value name size="6">
+                          </td>
+                          <td>
+
+                            <button class="btn btn-primary" type="submit" id="insert">Insert</button>
+                          </td>
+                          <td>
+                            <button class="btn btn-primary" type="submit" id="delete">Delete</button>
+                          </td>
+                          <td>
+                            <button class="btn btn-primary" type="submit" id="find">Find</button>
+                          </td>
+                        </thead>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="binary_tree_container" class="container-fluid" align="center">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
 
-        <!-------------------footer ends-------------->
 
 
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="scripts/stack/stack.js"></script>
-        <script src="scripts/queue/queue.js"></script>
-        <script src="scripts/linked lists/ll.js"></script>
-        <script src="scripts/binary search/bst.js"></script>
-        <script src="scripts/General/scroll.js"></script>
+
+
+
+
+    <!-------footer start ------------>
+
+    <section class="footersection" id="footerdiv">
+      <div class="container">
+        <div clacc="row justify-content-center">
+          <div class=" col-md-auto text-center">
+            <img src="images/uni.png">
+            <p class="text-center"></p>
+            <p>Development
+              of an application for
+              the Implementation
+              and use of data structures in a visualized environment</p>
+            <i class="fa fa-university" style="font-size:30px">
+              International University of Greece</i>
+          </div>
+          <div class=" col-md-auto text-center">
+            <p class="text-center"></p>
+            <i class="fa fa-user" style="font-size:30px"> Professor:
+              <a href="http://teachers.teicm.gr/outsios/index.html">Evangelos Outsios</a></i>
+          </div>
+          <div class=" col-md-auto text-center">
+            <p class="text-center"></p>
+            <i class="fa fa-graduation-cap" style="font-size:30px">Student:
+              Aikaterini Stefanidou</i>
+          </div>
+          <div class=" col-md-auto text-center">
+            <p class="text-center"></p>
+            <i class="fa fa-id-card" style="font-size:30px">
+              4111</i>
+          </div>
+          <div class=" col-md-auto text-center">
+            <p class="text-center"></p>
+            <i class="fa fa-link" style="font-size:30px">
+              <a href="">Github</a></i>
+          </div>
+          <div class=" col-md-auto text-center">
+            <p class="text-center"> </p>
+            <i class="fa fa-user-circle-o" style="font-size:30px"> Links:
+              <a href=""> <i class="fa fa-linkedin" style="font-size: 30px; color: #00008b"></i></a>
+              <a href="https://www.facebook.com"> <i class="fa fa-facebook"
+                  style="font-size: 30px; color: #0000ff"></i></a>
+              <a href=""> <i class="fa fa-github" style="font-size: 30px; color: #000000"></i> </a></i>
+          </div>
+          <div class=" col-md-auto text-center">
+            <p class="text-center"></p>
+            <i class="fa fa-copyright" style="font-size:30px">
+              Aikaterini Stefanidou 2020</i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+
+
+
+
+  <!-------------------footer ends-------------->
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="scripts/stack/stack.js"></script>
+  <script src="scripts/queue/queue.js"></script>
+  <script src="scripts/linked lists/ll.js"></script>
+  <script src="scripts/binary search/bst.js"></script>
+  <script src="scripts/General/scroll.js"></script>
 </body>
 
 </html>
