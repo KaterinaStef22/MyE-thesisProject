@@ -29,28 +29,46 @@ function shiftQueueTable() {
 
     for (let i = 0; i <= myQueue.size(); i++) {
         document.querySelector(`[queue_cell_value='${i}']`).innerHTML = "";
+        document.querySelector(`[queue_cell_id='${i}']`).style.backgroundColor = "";
     }
 
     for (let i = 0; i < myQueue.size(); i++) {
+        if (i >= 1) {
+            document.querySelector(`[queue_cell_id='${i - 1}']`).style.backgroundColor = "";
+        }
         let text = document.createTextNode(myQueue.print()[i]);
         document.querySelector(`[queue_cell_value='${i}']`).appendChild(text);
+        document.querySelector(`[queue_cell_id='${0}']`).style.backgroundColor = "#fa2f73";
+    }
+
+    for (let i = myQueue.size() + 1; i <= 9; i++) {
+        document.querySelector(`[queue_cell_value='${i}']`).innerHTML = "";
+        document.querySelector(`[queue_cell_id='${i}']`).style.backgroundColor = "";
     }
 
 }
-
 
 function runEnqueue() {
     let inputValue = document.getElementById("queuetext").value;
     let text = document.createTextNode(inputValue);
     if (disableEnqueue()) {
-        document.querySelector(`[queue_cell_value='${myQueue.size()}']`).innerHTML = "";
-        document.querySelector(`[queue_cell_value='${myQueue.size()}']`).appendChild(text);
+        if (myQueue.size() < 10) {
+            document.querySelector(`[queue_cell_value='${myQueue.size()}']`).innerHTML = "";
+            document.querySelector(`[queue_cell_value='${myQueue.size()}']`).appendChild(text);
+        }
         myQueue.enqueue(inputValue);
         console.log(inputValue + " " + myQueue.size());
     }
 
     if (myQueue.size() !== 0) {
-        document.querySelector(`[queue_cell_id='${myQueue.size()-1}']`).style.backgroundColor="lightgreen";
+        document.querySelector(`[queue_cell_id='${myQueue.size() - 1}']`).style.backgroundColor = "lightgreen";
+    }
+
+    if (myQueue.size() - 2 >= 0) {
+        document.querySelector(`[queue_cell_id='${myQueue.size() - 2}']`).style.backgroundColor = "";
+    }
+    if(myQueue.size()===10){
+        disableEnqueue();
     }
 }
 
@@ -82,8 +100,10 @@ function runClearQueue() {
 
         if (myQueue.size() < 1) {
             document.querySelector(`[queue_cell_value='${0}']`).innerHTML = "";
+            document.querySelector(`[queue_cell_id='${0}']`).style.backgroundColor = "";
         } else {
-            document.querySelector(`[queue_cell_value='${myQueue.size()-1}']`).innerHTML = "";
+            document.querySelector(`[queue_cell_value='${myQueue.size() - 1}']`).innerHTML = "";
+            document.querySelector(`[queue_cell_id='${myQueue.size() - 1}']`).style.backgroundColor = "";
         }
 
         if (myQueue.size() === 0) {
