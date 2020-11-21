@@ -193,7 +193,7 @@ function runAdd() {
 
 function whiteTheTable(){
     for(let i=0; i<10; i++){
-        document.querySelector(`[ll_cell_id='${i}']`).backgroundColor= "white";
+        document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor= "white";
     }
 }
 
@@ -253,9 +253,6 @@ function runClearList(){
     disableAdd();
 
 }
-
-
-
 
 
 document.getElementById("add").addEventListener("click", () => {

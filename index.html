@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="icon" type="image/png" href="images/logo3.png">
+  <link rel="icon" type="image/png" href="images/logo3.png">
 </head>
 
 <body>
@@ -22,9 +22,9 @@
   <div class="header" id="topheader">
     <nav class="navbar navbar-expand-lg fixed-top" id="sideNav">
       <div class="container  text-uppercase p-2">
-       <!-- <a class="navbar-brand font-weight-bold text-white" href="#">Data Structures</a>-->
-       <a class="navbar-brand font-weight-bold text-white" href="index.html">
-        <img src="images/logo3.png"  style="width: 50px; height: 50px; "/> Data Structures </a>
+        <!-- <a class="navbar-brand font-weight-bold text-white" href="#">Data Structures</a>-->
+        <a class="navbar-brand font-weight-bold text-white" href="index.html">
+          <img src="images/logo3.png" style="width: 50px; height: 50px; " /> Data Structures </a>
         <button class="navbar-toggler" type="button" style="border: 2px solid rgb(14, 5, 139);" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -789,14 +789,14 @@
 
 
       <div class="card" id="bstdiv">
-        <div class="card-header" id="headingThree">
+        <div class="card-header" id="headingFour">
           <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
-              aria-expanded="false" aria-controls="collapseThree">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
               Binary Tree Implementation
           </h2>
         </div>
-        <div id="collapseThree" class="collapse " aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div id="collapseFour" class="collapse " aria-labelledby="headingFour" data-parent="#accordionExample">
           <div class="card-body">
             <div class="BinarySearchTree" id="#bstdiv">
               <div class="containerNew headings text-center">
@@ -845,11 +845,11 @@
                     <div class="name my-3">
                       <table class="table">
                         <thead class="thead-dark">
+                          <tr>
                           <td>
                             <input type="Text" id="binarytreetext" value name size="6">
                           </td>
                           <td>
-
                             <button class="btn btn-primary" type="submit" id="insert">Insert</button>
                           </td>
                           <td>
@@ -858,6 +858,15 @@
                           <td>
                             <button class="btn btn-primary" type="submit" id="find">Find</button>
                           </td>
+                          <td>
+                            <button class="btn btn-primary" type="submit" id="clearTables">Clear Tables</button>
+                          </td>
+                        </tr>
+                      <tr>
+                        <td>
+                          <p id="insertedElements"></p>
+                        </td>
+                      </tr>
                         </thead>
                       </table>
 
@@ -867,6 +876,248 @@
               </div>
             </div>
             <div id="binary_tree_container" class="container-fluid" align="center">
+              <!-- preorder -->
+              <p>PreOrder</p>
+              <table>
+                <tr>
+                  <td>
+                    <!-- <div class="square"> -->
+                    <div class="col-sm with-number square" preorder_cell_id="0">
+                      <div class="index">0</div>
+                      <hr>
+                      <!-- <div class="content"> -->
+                      <div class="value content" preorder_cell_value="0"></div>
+                      <!-- </div> -->
+                    </div>
+                    <!-- </div> -->
+                  </td>
+                  <td>
+                    <div class="col-sm with-number  square" preorder_cell_id="1">
+                      <div class="index">1</div>
+                      <hr>
+                      <div class="valuecontent " preorder_cell_value="1"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" preorder_cell_id="2">
+                      <div class="index">2</div>
+                      <hr>
+                      <div class="value content" preorder_cell_value="2"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" preorder_cell_id="3">
+                      <div class="index">3</div>
+                      <hr>
+                      <div class="value content" preorder_cell_value="3"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" preorder_cell_id="4">
+                      <div class="index">4</div>
+                      <hr>
+                      <div class="value content" preorder_cell_value="4"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" preorder_cell_id="5">
+                      <div class="index">5</div>
+                      <hr>
+                      <div class="value content" preorder_cell_value="5"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" preorder_cell_id="6">
+                      <div class="index">6</div>
+                      <hr>
+                      <div class="value content" preorder_cell_value="6"></div>
+                      </di>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" preorder_cell_id="7">
+                      <div class="index">7</div>
+                      <hr>
+                      <div class="value content" preorder_cell_value="7"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" preorder_cell_id="8">
+                      <div class="index">8</div>
+                      <hr>
+                      <div class="value content" preorder_cell_value="8"> </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" preorder_cell_id="9">
+                      <div class="index">9</div>
+                      <hr>
+                      <div class="value content" preorder_cell_value="9"></div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- inorder -->
+              <p>InOrder</p>
+              <table>
+                <tr>
+                  <td>
+                    <!-- <div class="square"> -->
+                    <div class="col-sm with-number square" inorder_cell_id="0">
+                      <div class="index">0</div>
+                      <hr>
+                      <!-- <div class="content"> -->
+                      <div class="value content" inorder_cell_value="0"></div>
+                      <!-- </div> -->
+                    </div>
+                    <!-- </div> -->
+                  </td>
+                  <td>
+                    <div class="col-sm with-number  square" inorder_cell_id="1">
+                      <div class="index">1</div>
+                      <hr>
+                      <div class="valuecontent " inorder_cell_value="1"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" inorder_cell_id="2">
+                      <div class="index">2</div>
+                      <hr>
+                      <div class="value content" inorder_cell_value="2"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" inorder_cell_id="3">
+                      <div class="index">3</div>
+                      <hr>
+                      <div class="value content" inorder_cell_value="3"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" inorder_cell_id="4">
+                      <div class="index">4</div>
+                      <hr>
+                      <div class="value content" inorder_cell_value="4"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" inorder_cell_id="5">
+                      <div class="index">5</div>
+                      <hr>
+                      <div class="value content" inorder_cell_value="5"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" inorder_cell_id="6">
+                      <div class="index">6</div>
+                      <hr>
+                      <div class="value content" inorder_cell_value="6"></div>
+                      </di>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" inorder_cell_id="7">
+                      <div class="index">7</div>
+                      <hr>
+                      <div class="value content" inorder_cell_value="7"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" inorder_cell_id="8">
+                      <div class="index">8</div>
+                      <hr>
+                      <div class="value content" inorder_cell_value="8"> </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" inorder_cell_id="9">
+                      <div class="index">9</div>
+                      <hr>
+                      <div class="value content" inorder_cell_value="9"></div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- postorder -->
+              <p>PostOrder</p>
+              <table>
+                <tr>
+                  <td>
+                    <!-- <div class="square"> -->
+                    <div class="col-sm with-number square" postorder_cell_id="0">
+                      <div class="index">0</div>
+                      <hr>
+                      <!-- <div class="content"> -->
+                      <div class="value content" postorder_cell_value="0"></div>
+                      <!-- </div> -->
+                    </div>
+                    <!-- </div> -->
+                  </td>
+                  <td>
+                    <div class="col-sm with-number  square" postorder_cell_id="1">
+                      <div class="index">1</div>
+                      <hr>
+                      <div class="valuecontent " postorder_cell_value="1"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" postorder_cell_id="2">
+                      <div class="index">2</div>
+                      <hr>
+                      <div class="value content" postorder_cell_value="2"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" postorder_cell_id="3">
+                      <div class="index">3</div>
+                      <hr>
+                      <div class="value content" postorder_cell_value="3"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" postorder_cell_id="4">
+                      <div class="index">4</div>
+                      <hr>
+                      <div class="value content" postorder_cell_value="4"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" postorder_cell_id="5">
+                      <div class="index">5</div>
+                      <hr>
+                      <div class="value content" postorder_cell_value="5"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" postorder_cell_id="6">
+                      <div class="index">6</div>
+                      <hr>
+                      <div class="value content" postorder_cell_value="6"></div>
+                      </di>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" postorder_cell_id="7">
+                      <div class="index">7</div>
+                      <hr>
+                      <div class="value content" postorder_cell_value="7"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" postorder_cell_id="8">
+                      <div class="index">8</div>
+                      <hr>
+                      <div class="value content" postorder_cell_value="8"> </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="col-sm with-number square" postorder_cell_id="9">
+                      <div class="index">9</div>
+                      <hr>
+                      <div class="value content" postorder_cell_value="9"></div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
 
             </div>
           </div>
@@ -923,10 +1174,12 @@
           <div class=" col-md-auto text-center">
             <p class="text-center"> </p>
             <i class="fa fa-user-circle-o" style="font-size:30px"> Links:
-              <a href="https://www.linkedin.com/in/katerina-stefanidou-a8919018b/"> <i class="fa fa-linkedin" style="font-size: 30px; color: #00008b"></i></a>
+              <a href="https://www.linkedin.com/in/katerina-stefanidou-a8919018b/"> <i class="fa fa-linkedin"
+                  style="font-size: 30px; color: #00008b"></i></a>
               <a href="https://www.facebook.com"> <i class="fa fa-facebook"
                   style="font-size: 30px; color: #0000ff"></i></a>
-              <a href="https://github.com/KaterinaStef22"> <i class="fa fa-github" style="font-size: 30px; color: #000000"></i> </a></i>
+              <a href="https://github.com/KaterinaStef22"> <i class="fa fa-github"
+                  style="font-size: 30px; color: #000000"></i> </a></i>
           </div>
           <div class=" col-md-auto text-center">
             <p class="text-center"></p>
