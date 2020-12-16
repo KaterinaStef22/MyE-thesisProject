@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
+
+
 }
 
 a {
@@ -66,7 +68,8 @@ p {
 .nav-item a {
   color: #3498db!important;
   font-weight: bold;
-}
+  font-size: 18px;
+ }
 
 .navbar-toggle-icon {
   background-color: white !important;
@@ -294,7 +297,8 @@ ul {
 }
 
 .card-body h3 {
-  background-color: rgba(0, 168, 255, 0.3);
+  /*background-color: rgba(0, 168, 255, 0.3);*/
+  background-color: #3498db;
   font-size: 25px;
   background-size: auto;
   text-align: center;
@@ -308,7 +312,12 @@ ul {
   margin: 0 auto;
   width: 100%;
 }
-
+/*ll arrows*/
+.fas {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  color:#3498db;
+}
 /*.circle {
     width: 150%;
     height: 50px;
@@ -390,7 +399,8 @@ hr {
 /**--FOOTER--**/
 .footersection {
   /*  background-color:#b6f1ea; */
-  background-color: rgba(0, 168, 255, 0.3);
+  /*background-color: rgba(0, 168, 255, 0.3);*/
+  background-color:#2fbbe7 ;
   padding: 2rem 0 2rem;
   margin-top: 500px;
 }
