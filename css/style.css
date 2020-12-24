@@ -153,6 +153,14 @@ ul {
   text-align: center;
 }
 
+.hasValue{
+  display: inline-block !important;
+}
+
+.hasNotValue{
+  display: none !important;
+}
+
 
 
 .Stack,

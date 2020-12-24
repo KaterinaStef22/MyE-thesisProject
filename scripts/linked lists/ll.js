@@ -128,7 +128,7 @@ function LinkedList() {
             currentNode = currentNode.next;
         }
         console.log(collection);
-        return collection
+        return collection;
     }
 
 }
@@ -138,14 +138,14 @@ var reverseList = new Array();
 var myList = new LinkedList();
 
 function reverseArray(arr) {
-    return arr.map(arr => arr).reverse();
+    return arr.map(arr => arr).sort();
 }
 
 function shiftLinkedListTable() {
 
-    if (myList.size() > 1) {
-        console.log("List Here before reverse " + myList.printList());
-        reverseList = reverseArray(myList.printList());
+   if (myList.size() > 1) {
+     console.log("List Here before reverse " + myList.printList());
+     reverseList = reverseArray(myList.printList());
         console.log("List Here after reverse " + reverseList);
 
         for (let i = 1; i < myList.size(); i++) {
@@ -158,7 +158,7 @@ function shiftLinkedListTable() {
                 document.querySelector(`[ll_cell_value='${i}']`).appendChild(text);
             }
         }
-    }
+   }
 }
 
 function disableAdd() {
@@ -173,83 +173,141 @@ function disableAdd() {
 
 }
 
-function runAdd() {
-    let inputValue = document.getElementById("linkedlisttext").value;
-    let text = document.createTextNode(inputValue);
-    if (disableAdd()) {
-        myList.add(inputValue);
-        document.querySelector(`[ll_cell_value='${0}']`).innerHTML = "";
-        document.querySelector(`[ll_cell_value='${0}']`).appendChild(text);
-        document.querySelector(`[ll_cell_id='${0}']`).style.backgroundColor= "lightgreen";
-        console.log(inputValue + " " + myList.size());
-        shiftLinkedListTable();
+function appendChild(text) {
+    console.log("List Here before reverse " + myList.printList());
+    reverseList = reverseArray(myList.printList());
+    console.log("List Here after reverse " + reverseList);
+    whitetable()
+    for (let i = 0; i <= reverseList.length - 1; i++) {
+        if (!(reverseList[i] === undefined)) {
+            document.querySelector(`[ll_cell_value='${i}']`).appendChild(text);
+        }
     }
 
-    if (myList.size() !== 0 && myList.size()>1) {
-        document.querySelector(`[ll_cell_id='${myList.size()-1}']`).style.backgroundColor="lightgreen";
-    }
-
-}
-
-function whiteTheTable(){
-    for(let i=0; i<10; i++){
-        document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor= "white";
-    }
-}
-
-function runRemove() {
-    whiteTheTable();
     for (let i = 0; i < myList.size(); i++) {
         document.querySelector(`[ll_cell_value='${i}']`).innerHTML = "";
     }
 
-    let inputValue = document.getElementById("linkedlisttext").value;
-    myList.remove(inputValue);
-    console.log("List Here before reverse " + myList.printList());
-    reverseList = reverseArray(myList.printList());
-    console.log("List Here after reverse " + reverseList);
-
-   
     for (let i = 0; i <= reverseList.length; i++) {
         if (!(reverseList[i] === undefined)) {
             let text = document.createTextNode(reverseList[i]);
             document.querySelector(`[ll_cell_value='${i}']`).appendChild(text);
         }
-        
     }
-    disableAdd(); 
+}
+
+function runAdd() {
+    whitetable()
+    let inputValue = document.getElementById("linkedlisttext").value;
+    let text = document.createTextNode(inputValue);
+    if (disableAdd()) {
+        myList.add(inputValue);
+
+        console.log(inputValue + " " + myList.size());
+        appendChild(text)
+        //shiftLinkedListTable()
+        // document.querySelector(`[ll_cell_id='${}']`).style.backgroundColor = "lightgreen";
+        document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.remove("hasNotValue");
+        document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.add("hasValue");
+        if (myList.size() - 1 <= 8) {
+            document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.remove("hasNotValue");
+            document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.add("hasValue");
+        }
+    }
+
+}
+
+const whitetable = function whiteTheTable() {
+    for (let i = 0; i < 10; i++) {
+        console.log("IN HERE")
+        document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor = "";
+    }
+}
+
+const isSearchNumberInTheList = (text) => {
+    for (let i = 0; i < myList.size(); i++) {
+        if (myList.indexOf(text) !== -1) {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+
+function runRemove() {
+    let inputValue = document.getElementById("linkedlisttext").value;
+    if (isSearchNumberInTheList(inputValue)) {
+        whitetable()
+
+        for (let i = 0; i < myList.size(); i++) {
+            document.querySelector(`[ll_cell_value='${i}']`).innerHTML = "";
+        }
+
+        myList.remove(inputValue);
+        document.querySelector(`[ll_cell_id='${myList.size()}']`).classList.remove("hasValue");
+        document.querySelector(`[ll_cell_id='${myList.size()}']`).classList.add("hasNotValue");
+        if (myList.size() - 1 < 8) {
+            document.getElementsByClassName("fa-arrow-right")[myList.size()].classList.remove("hasValue");
+            document.getElementsByClassName("fa-arrow-right")[myList.size()].classList.add("hasNotValue");
+        }
+        console.log("List Here before reverse " + myList.printList());
+        reverseList = reverseArray(myList.printList());
+        console.log("List Here after reverse " + reverseList);
+
+
+        for (let i = 0; i <= reverseList.length; i++) {
+            if (!(reverseList[i] === undefined)) {
+                let text = document.createTextNode(reverseList[i]);
+                document.querySelector(`[ll_cell_value='${i}']`).appendChild(text);
+            }
+
+        }
+        disableAdd();
+    }
 }
 
 function runSearch() {
-    let inputValue=document.getElementById("linkedlisttext").value;
-    
-    if(myList.size()>0){
-        let index= reverseList.indexOf(inputValue)
-        console.log("Here is tthe index " + index +"of the inoput value "+inputValue)
-        whiteTheTable();
-        document.querySelector(`[ll_cell_id='${index}']`).style.backgroundColor= "red";
+    let inputValue = document.getElementById("linkedlisttext").value;
+
+    if (myList.size() > 0) {
+        let index = reverseList.indexOf(inputValue)
+        console.log("Here is tthe index " + index + "of the inoput value " + inputValue)
+        for (let i = 0; i < 10; i++) {
+            console.log("IN HERE")
+            document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor = "";
+        }
+        document.querySelector(`[ll_cell_id='${index}']`).style.backgroundColor = "red";
     }
-    
+
 }
 
-function runClearList(){
+function runClearList() {
     console.log("size before while:" + myList.size())
-    while (myList.size()>= 0) {
+    whitetable()
+    while (myList.size() >= 0) {
         console.log("size after while before removeAt:" + myList.size())
-      
-        if(myList.size()<1){
+
+        if (myList.size() < 1) {
             document.querySelector(`[ll_cell_value='${0}']`).innerHTML = "";
-        }else{
-            document.querySelector(`[ll_cell_value='${myList.size()-1}']`).innerHTML = "";
+        } else {
+            document.querySelector(`[ll_cell_value='${myList.size() - 1}']`).innerHTML = "";
         }
-        
+
         if (myList.size() === 0) {
             break;
         }
-        myList.removeAt(myList.size()-1);
+        document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.remove("hasValue");
+        document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.add("hasNotValue");
+        if (myList.size() - 1 <= 8) {
+            document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.remove("hasValue");
+            document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.add("hasNotValue");
+        }
+        myList.removeAt(myList.size() - 1);
         console.log("size after while after removeAt:" + myList.size())
 
     }
+
     disableAdd();
 
 }
@@ -274,7 +332,7 @@ document.getElementById("clearlist").addEventListener("click", () => {
     console.log("Clear Button Clicked");
     runClearList();
 });
-  
+
 
 
  //names.add('Katerina');
