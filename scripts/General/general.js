@@ -1,3 +1,21 @@
+// Allow only numbers on input
+
+function onlyNumbersOnInput() {
+    if (isNumber(parseInt(this.value))) {
+        if (this.value.length > MAX_INPUT_LENGTH) {
+            this.value = this.value.slice(0, MAX_INPUT_LENGTH);
+        }
+    } else {
+        this.value = this.value.slice(0, 0);
+    }
+}
+
+// Check a value if is number
+
+function isNumber(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
 document.getElementsByClassName("nav-link")[1]
 .addEventListener("click", () => {
     console.log("Stack Clicked");
@@ -33,3 +51,5 @@ document.getElementsByClassName("nav-link")[4]
     document.getElementById("collapseThree").className="collapse"
     document.getElementById("collapseFour").className="collapse show"
 });
+
+document.getElementById("linkedlisttext").addEventListener("input", onlyNumbersOnInput);

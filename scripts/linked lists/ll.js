@@ -138,7 +138,7 @@ var reverseList = new Array();
 var myList = new LinkedList();
 
 function reverseArray(arr) {
-    return arr.map(arr => arr).sort();
+    return arr.map(arr => arr).sort((a, b) => a - b);
 }
 
 function shiftLinkedListTable() {
@@ -198,7 +198,7 @@ function appendChild(text) {
 
 function runAdd() {
     whitetable()
-    let inputValue = document.getElementById("linkedlisttext").value;
+    let inputValue = parseInt(document.getElementById("linkedlisttext").value);
     let text = document.createTextNode(inputValue);
     if (disableAdd()) {
         myList.add(inputValue);
