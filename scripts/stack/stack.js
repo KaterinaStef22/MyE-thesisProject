@@ -58,7 +58,7 @@ function runPush() {
 
     document.querySelector(
         `[stack_cell_id='${myStack.size() - 1}']`
-    ).style.backgroundColor = "lightgreen";
+    ).style.backgroundColor = "#03A6A6";
 
     if (myStack.size() - 2 !== -1) {
         document.querySelector(
@@ -103,7 +103,7 @@ function runPop() {
     }
     document.querySelector(
         `[stack_cell_id='${myStack.size()}']`
-    ).style.backgroundColor = "#fa2f73";
+    ).style.backgroundColor = "#D8043C";
     disablePush();
 }
 
@@ -150,4 +150,4 @@ document.getElementById("clearstack").addEventListener("click", () => {
     runClearStack();
 });
 
-//https://www.youtube.com/watch?v=Gj5qBheGOEo
+

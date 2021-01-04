@@ -38,7 +38,7 @@ function shiftQueueTable() {
         }
         let text = document.createTextNode(myQueue.print()[i]);
         document.querySelector(`[queue_cell_value='${i}']`).appendChild(text);
-        document.querySelector(`[queue_cell_id='${0}']`).style.backgroundColor = "#fa2f73";
+        document.querySelector(`[queue_cell_id='${0}']`).style.backgroundColor = "#D8043C";
     }
 
     for (let i = myQueue.size() + 1; i <= 9; i++) {
@@ -61,13 +61,13 @@ function runEnqueue() {
     }
 
     if (myQueue.size() !== 0) {
-        document.querySelector(`[queue_cell_id='${myQueue.size() - 1}']`).style.backgroundColor = "lightgreen";
+        document.querySelector(`[queue_cell_id='${myQueue.size() - 1}']`).style.backgroundColor = "#03A6A6";
     }
 
     if (myQueue.size() - 2 >= 0) {
-        document.querySelector(`[queue_cell_id='${myQueue.size() - 2}']`).style.backgroundColor = "";
+        document.querySelector(`[queue_cell_id='${myQueue.size() - 2}']`).style.backgroundColor = "cyan";
     }
-    if(myQueue.size()===10){
+     if(myQueue.size()===10){
         disableEnqueue();
     }
 }
