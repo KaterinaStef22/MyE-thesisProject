@@ -1,3 +1,4 @@
+/*GENERAL BODY*/
 * {
   margin: 0;
   padding: 0;
@@ -163,7 +164,7 @@ ul {
   padding: 8px;
 }
 
-
+/*BUTTONS*/
 .hvr-shutter-out-horizontal {
   display: inline-block;
   vertical-align: middle;
@@ -359,8 +360,4 @@ hr {
 html {
   scroll-behavior: smooth;
 }
-@media (max-width:700px){
-  body{
-    color:blue;
-  }
-}
+
