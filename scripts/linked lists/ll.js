@@ -206,21 +206,23 @@ function runAdd() {
         console.log(inputValue + " " + myList.size());
         appendChild(text)
         //shiftLinkedListTable()
-        // document.querySelector(`[ll_cell_id='${}']`).style.backgroundColor = "lightgreen";
+       // document.querySelector(`[ll_cell_id='${}']`).style.backgroundColor = "lightgreen";
         document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.remove("hasNotValue");
         document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.add("hasValue");
+       
         if (myList.size() - 1 <= 8) {
             document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.remove("hasNotValue");
             document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.add("hasValue");
         }
     }
+  
 
 }
 
 const whitetable = function whiteTheTable() {
     for (let i = 0; i < 10; i++) {
         console.log("IN HERE")
-        document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor = "";
+        document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor = "cyan";
     }
 }
 
@@ -277,7 +279,7 @@ function runSearch() {
             console.log("IN HERE")
             document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor = "";
         }
-        document.querySelector(`[ll_cell_id='${index}']`).style.backgroundColor = "red";
+        document.querySelector(`[ll_cell_id='${index}']`).style.backgroundColor = "#D8043C";
     }
 
 }
