@@ -236,7 +236,7 @@ const isSearchNumberInTheList = (text) => {
 
 
 function runRemove() {
-    let inputValue = document.getElementById("linkedlisttext").value;
+    let inputValue = parseInt(document.getElementById("linkedlisttext").value);
     if (isSearchNumberInTheList(inputValue)) {
         whitetable()
 
@@ -268,7 +268,7 @@ function runRemove() {
 }
 
 function runSearch() {
-    let inputValue = document.getElementById("linkedlisttext").value;
+    let inputValue = parseInt (document.getElementById("linkedlisttext").value);
 
     if (myList.size() > 0) {
         let index = reverseList.indexOf(inputValue)
