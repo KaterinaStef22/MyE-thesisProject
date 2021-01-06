@@ -50,8 +50,8 @@ function LinkedList() {
         return length === 0;
     }
 
-    this.indexOf = function (element) { //me indexOf H μέθοδος indexOf() επιστρέφει τη θέση στη οποία ένα συγκεκριμένο κείμενο εμφανίζεται για πρώτη φορά μέσα σε μία συμβολοσειρά. Ο υπολογισμός της θέσης ξεκινά από το μηδέν. Αν το κείμενο δε βρεθεί μέσα στη συμβολοσειρά τότε η μέθοδος επιστρέφει -1.
-        var currentNode = head; //index pinaka periexomenwn
+    this.indexOf = function (element) {                  //me indexOf H μέθοδος indexOf() επιστρέφει τη θέση στη οποία ένα συγκεκριμένο κείμενο εμφανίζεται για πρώτη φορά μέσα σε μία συμβολοσειρά. Ο υπολογισμός της θέσης ξεκινά από το μηδέν. Αν το κείμενο δε βρεθεί μέσα στη συμβολοσειρά τότε η μέθοδος επιστρέφει -1.
+        var currentNode = head;                           //index pinaka periexomenwn
         var index = -1;
 
         while (currentNode) {
@@ -337,16 +337,5 @@ document.getElementById("clearlist").addEventListener("click", () => {
 
 
 
- //names.add('Katerina');
-// names.add('Anastasia');
-// names.add('Dimitra');
-//names.add('Hliana');
- //names.add('Despoina');
-//console.log(names.size());
-// console.log(names.removeAt(3));
-// console.log(names.elementAt(3));
-// console.log(names.indexOf('Dimitra')); //poia h thesh
-// console.log(names.size());
 
 
-//https://www.youtube.com/watch?v=9YddVVsdG5A
