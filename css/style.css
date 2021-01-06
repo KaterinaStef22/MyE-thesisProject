@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-
+  
 }
 
 a {
@@ -70,6 +70,7 @@ p {
   font-weight: bold;
   font-size: 18px;
  }
+
 
 .navbar-toggle-icon {
   background-color: white !important;
@@ -144,6 +145,10 @@ p {
 }
 
 /*STRUCTURES*/
+.card-body p,li{
+  font-size: 17px;
+  color: black;
+}
 .structures {
   margin-bottom: 500px;
 }
