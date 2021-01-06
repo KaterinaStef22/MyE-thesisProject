@@ -70,7 +70,10 @@ p {
   font-weight: bold;
   font-size: 18px;
  }
-
+ .col-md-6 p,li{
+   color: black;
+   font-size: 19px;
+ }
 
 .navbar-toggle-icon {
   background-color: white !important;
@@ -145,10 +148,6 @@ p {
 }
 
 /*STRUCTURES*/
-.card-body p,li{
-  font-size: 17px;
-  color: black;
-}
 .structures {
   margin-bottom: 500px;
 }
