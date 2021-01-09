@@ -340,9 +340,9 @@ function paintTheCells(value){
       postorder_id = i;
     }
   }
-  document.querySelector(`[preorder_cell_id='${preorder_id}']`).style.backgroundColor = "lightgreen";
-  document.querySelector(`[inorder_cell_id='${inorder_id}']`).style.backgroundColor = "lightgreen";
-  document.querySelector(`[postorder_cell_id='${postorder_id}']`).style.backgroundColor = "lightgreen";
+  document.querySelector(`[preorder_cell_id='${preorder_id}']`).style.backgroundColor = "cyan";
+  document.querySelector(`[inorder_cell_id='${inorder_id}']`).style.backgroundColor = "cyan";
+  document.querySelector(`[postorder_cell_id='${postorder_id}']`).style.backgroundColor = "cyan";
 }
 
 function runClearTables() {
@@ -390,8 +390,8 @@ document.getElementById("clearTables").addEventListener("click", () => {
 
 
 // myBst.insert("F");
-// myBst.insert("D");
-// myBst.insert("J");
+ // myBst.insert("D");
+ //myBst.insert("J");
 // myBst.insert("K");
 // myBst.insert("B");
 // myBst.insert("E");
@@ -409,7 +409,7 @@ document.getElementById("clearTables").addEventListener("click", () => {
 // // console.log(myBst.findMinHeight());
 // // console.log(myBst.findMaxHeight());
 // // console.log(myBst.isBalanced());
-// console.log('inOrder: ' + myBst.inOrder());
+//console.log('inOrder: ' + myBst.inOrder());
 // console.log('preOrder: ' + myBst.preOrder());
 // console.log('postOrder: ' + myBst.postOrder());
 // console.log('size: ' + myBst.size());
