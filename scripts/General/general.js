@@ -1,3 +1,5 @@
+/*GENERAL*/ 
+
 // Allow only numbers on input
 
 function onlyNumbersOnInput() {
