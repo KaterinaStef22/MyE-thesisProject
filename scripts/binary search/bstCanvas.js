@@ -1,3 +1,5 @@
+/*BINARY TREE CANVAS*/
+
 // Represents the node in the tree. Will be displayed as a small circle in the browser.
 // x, y --> x, y co-ordinates of the center of circle
 // r    --> radius of the circle
