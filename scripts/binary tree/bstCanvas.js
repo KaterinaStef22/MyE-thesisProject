@@ -1,151 +1,162 @@
 /*BINARY TREE CANVAS*/
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
 
-// Represents the node in the tree. Will be displayed as a small circle in the browser.
-// x, y --> x, y co-ordinates of the center of circle
-// r    --> radius of the circle
-// ctx  --> context of the canvas
-// data --> data to be displayed (Only number)
+const LEFT = 0
+const RIGHT = 1
 
-var NodeA = function (x, y, r, ctx, data) {
-    // left child of a node
-    this.leftNode = null;
-    // right child of a node
-    this.rightNode = null;
+class NodeB {
+    constructor(value) {
+        this.value = value
+        this.children = []
+        this.parent = null
+        this.pos = { x: 0, y: 0 }
+        this.r = 20
+    }
 
-    // draw function. Responsible for drawing the node
-    this.draw = function () {
-        ctx.beginPath();
-        ctx.arc(x, y, r, 0, 2 * Math.PI);
-        ctx.stroke();
-        ctx.closePath();
-        ctx.strokeText(data, x, y);
-    };
-    
-    // Simple getters
-    this.getData = function () { return data; };
-    this.getX = function () { return x; };
-    this.getY = function () { return y; };
-    this.getRadius = function () { return r; };
+    get left() {
+        return this.children[LEFT]
+    }
 
-    // Returns coordinate for the left child
-    // Go back 3 times radius in x axis and 
-    // go down 3 times radius in y axis
-    this.leftCoordinate = function () {
-        return { cx: (x - (3 * r)), cy: (y + (3 * r)) }
-    };
-    // Same concept as above but for right child        
-    this.rightCoordinate = function () {
-        return { cx: (x + (3 * r)), cy: (y + (3 * r)) }
-    };
-};
+    set left(value) {
+        value.parent = this
+        this.children[LEFT] = value
+    }
 
-// Draws a line from one circle(node) to another circle (node) 
-var Line = function () {
-    // Takes 
-    // x,y      - starting x,y coordinate
-    // toX, toY - ending x,y coordinate
-    this.draw = function (x, y, toX, toY, r, ctx) {
-        var moveToX = x;
-        var moveToY = y + r;
-        var lineToX = toX;
-        var lineToY = toY - r;
-       // ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(moveToX, moveToY);
-        ctx.lineTo(lineToX, lineToY);
-        ctx.stroke();
-    };
-};
+    get right() {
+        return this.children[RIGHT]
+    }
 
-// Represents the btree logic
-var BTree = function () {
-    var c = document.getElementById('my-canvas');
-    var ctx = c.getContext('2d');
-    var line = new Line();
-    this.root = null;
+    set right(value) {
+        value.parent = this
+        this.children[RIGHT] = value
+    }
 
-    var self = this;
+    set position(position) {
+        this.pos = position
+    }
 
-    // Getter for root
-    this.getRoot = function () { return this.root; };
+    get position() {
+        return this.pos
+    }
 
-    // Adds element to the tree
+    get radius() {
+        return this.r
+    }
 
-    this.add = function (data) {
-        // If root exists, then recursively find the place to add the new node
-        var dataExists = true;
-        for (let i = 0; i <= tempArray.length-1; i++) {
-            console.log("CHECK HEERERERERE "+ tempArray[i] +" " + data)
-            if (tempArray[i] === data) {
-                dataExists = false;
-                console.log("CHECK HEERERERERE "+ dataExists)
-                break;
-            }
-        }
-        console.log("CHECK HEERERERERE "+ dataExists)
-        if (dataExists) {
-            if (this.root) {
-                this.recursiveAddNode(this.root, null, null, data);
-            } else {
-                // If not, the add the element as a root 
-                this.root = this.addAndDisplayNode(400, 50, 30, ctx, data);
-                return;
-            }
-        }
-    };
+}
 
+class Tree {
+    constructor() {
+        this.root = null;
+        this.startPosition = { x: 800, y: 44 }
+        this.axisX = 350
+        this.axisY = 80
 
-    // Recurively traverse the tree and find the place to add the node
-    this.recursiveAddNode = function (node, prevNode, coordinateCallback, data) {
-        if (!node) {
-            // This is either node.leftCoordinate or node.rightCoordinate
-            var xy = coordinateCallback();
-            var newNode = this.addAndDisplayNode(xy.cx, xy.cy, 30, ctx, data);
-            line.draw(prevNode.getX(), prevNode.getY(), xy.cx, xy.cy, prevNode.getRadius(), ctx)
-            return newNode;
+    }
+
+    getPosition({ x, y }, isLeft = false) {
+        return { x: isLeft ? x - this.axisX + y : x + this.axisX - y, y: y + this.axisY }
+    }
+
+    add(value) {
+        const newNode = new NodeB(value);
+        if (this.root == null) {
+            newNode.position = this.startPosition
+            this.root = newNode
         }
         else {
-            if (data <= node.getData()) {
-                node.left = this.recursiveAddNode(node.left, node, node.leftCoordinate, data);
+            let node = this.root
+            while (node) {
+                if (node.value == value)
+                    break;
+                if (value > node.value) {
+                    if (node.right == null) {
+                        newNode.position = this.getPosition(node.position)
+                        node.right = newNode
+                        break;
+                    }
+                    node = node.right
+                }
+                else {
+                    if (node.left == null) {
+                        newNode.position = this.getPosition(node.position, true)
+                        node.left = newNode
+                        break;
+                    }
+                    node = node.left
+                }
             }
-            else {
-                node.right = this.recursiveAddNode(node.right, node, node.rightCoordinate, data);
-            }
-            return node;
         }
-    };
+    }
 
-    // Adds the node to the tree and calls the draw function
-    this.addAndDisplayNode = function (x, y, r, ctx, data) {
-        var node = new NodeA(x, y, r, ctx, data);
-        node.draw();
-        return node;
-    };
+    all(node) {
+        if (node === undefined)
+            return
+        else {
+            console.log(node.value)
+            this.all(node.left)
+            this.all(node.right)
+        }
+    }
 
-    this.clearCanvas = function () {
+    getAll() {
+        this.all(this.root)
+    }
+
+    bfs() {
+        const queue = [];
+        const black = "#000"
+
+        queue.push(this.root);
+
+        while (queue.length !== 0) {
+            const node = queue.shift();
+            const { x, y } = node.position
+
+            const color = "#" + ((1 << 24) * Math.random() | 0).toString(16) //randomm color generator
+            ctx.beginPath();
+            ctx.arc(x, y, node.radius, 0, 2 * Math.PI)
+            ctx.strokeStyle = black
+            ctx.fillStyle = color
+            ctx.fill()
+            ctx.stroke()
+            ctx.strokeStyle = black
+            ctx.strokeText(node.value, x, y)
+
+
+            node.children.forEach(child => {
+
+                const { x: x1, y: y1 } = child.position;
+                ctx.beginPath();
+                ctx.moveTo(x, y + child.radius);
+                ctx.lineTo(x1, y1 - child.radius)
+                ctx.stroke();
+                queue.push(child)
+            });
+
+        }
+    }
+    
+    clearCanvas() {
         ctx.clearRect(0, 0, c.width, c.height);
     }
 
-};
+}
 
-var addToTree = function () {
-    input = document.getElementById('binarytreetext');
-    value = parseInt(input.value);
-    if (value)
-        btree.add(value);
-    else
-        alert("Wrong input");
-};
+var t = new Tree();
 
-var btree = new BTree();
 
 document.getElementById("insert").addEventListener("click", () => {
     //console.log("Clear Tables Button Clicked");
-    addToTree();
+    input = document.getElementById('binarytreetext');
+    value = parseInt(input.value);
+    t.add(value);
+    t.bfs()
 });
 
 document.getElementById("clearTables").addEventListener("click", () => {
     //console.log("Clear Tables Button Clicked");
-    btree.clearCanvas();
-    btree = new BTree();
+    t.clearCanvas();
+		t = new Tree();
 });
