@@ -164,7 +164,7 @@ function shiftLinkedListTable() {
 function disableAdd() {
     if (myList.size() >= 10) {
         document.getElementById("add").disabled = true;
-        alert("List Is Full");
+        alert("You can add up to 10 values");
         return false;
     } else {
         document.getElementById("add").disabled = false;

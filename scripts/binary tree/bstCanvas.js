@@ -20,7 +20,7 @@ var NodeA = function (x, y, r, ctx, data) {
         ctx.closePath();
         ctx.strokeText(data, x, y);
     };
-
+    
     // Simple getters
     this.getData = function () { return data; };
     this.getX = function () { return x; };
@@ -49,6 +49,7 @@ var Line = function () {
         var moveToY = y + r;
         var lineToX = toX;
         var lineToY = toY - r;
+       // ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(moveToX, moveToY);
         ctx.lineTo(lineToX, lineToY);
@@ -87,7 +88,7 @@ var BTree = function () {
                 this.recursiveAddNode(this.root, null, null, data);
             } else {
                 // If not, the add the element as a root 
-                this.root = this.addAndDisplayNode(200, 20, 15, ctx, data);
+                this.root = this.addAndDisplayNode(400, 50, 30, ctx, data);
                 return;
             }
         }
@@ -99,7 +100,7 @@ var BTree = function () {
         if (!node) {
             // This is either node.leftCoordinate or node.rightCoordinate
             var xy = coordinateCallback();
-            var newNode = this.addAndDisplayNode(xy.cx, xy.cy, 15, ctx, data);
+            var newNode = this.addAndDisplayNode(xy.cx, xy.cy, 30, ctx, data);
             line.draw(prevNode.getX(), prevNode.getY(), xy.cx, xy.cy, prevNode.getRadius(), ctx)
             return newNode;
         }

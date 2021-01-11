@@ -231,7 +231,7 @@ const myBst = new BST();
 function disableInsert() {
   if (myBst.size() >= 9) {
     document.getElementById("insert").disabled = true;
-    alert("Table Is Full");
+    alert("You can add up to 10 values");
     return false;
   } else {
     document.getElementById("insert").disabled = false;
@@ -256,7 +256,6 @@ function runInsert() {
     paintTheCells(inputValue)
   }
 }
-
 function runInsertForPreOrder() {
   for (let i = 0; i <= myBst.size(); i++) {
     document.querySelector(`[preorder_cell_value='${i}']`).innerHTML = "";
@@ -320,6 +319,12 @@ function whiteTheTable() {
 function runFind() {
   let inputValue = document.getElementById("binarytreetext").value;
   paintTheCells(inputValue)
+  let insertedElements = document.getElementById("insertedElements").innerText;
+  for (let i = 0; i < myBst.preOrder().length; i++) {
+      if (myBst.preOrder()[i]===inputValue) {
+        alert("The number exists");
+      }
+  }
 }
 
 function paintTheCells(value){
