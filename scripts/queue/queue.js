@@ -67,7 +67,7 @@ function runEnqueue() {
     }
 
     if (myQueue.size() - 2 >= 0) {
-        document.querySelector(`[queue_cell_id='${myQueue.size() - 2}']`).style.backgroundColor = "cyan";
+        document.querySelector(`[queue_cell_id='${myQueue.size() - 2}']`).style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
     }
      if(myQueue.size()===10){
         disableEnqueue();

@@ -222,7 +222,7 @@ function runAdd() {
 const whitetable = function whiteTheTable() {
     for (let i = 0; i < 10; i++) {
         console.log("IN HERE")
-        document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor = "cyan";
+        document.querySelector(`[ll_cell_id='${i}']`).style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
     }
 }
 

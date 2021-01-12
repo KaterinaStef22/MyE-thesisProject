@@ -347,9 +347,11 @@ function paintTheCells(value){
       postorder_id = i;
     }
   }
-  document.querySelector(`[preorder_cell_id='${preorder_id}']`).style.backgroundColor = "cyan";
-  document.querySelector(`[inorder_cell_id='${inorder_id}']`).style.backgroundColor = "cyan";
-  document.querySelector(`[postorder_cell_id='${postorder_id}']`).style.backgroundColor = "cyan";
+ // const color = "#" + ((1 << 24) * Math.random() | 0).toString(16) cyan
+  document.querySelector(`[preorder_cell_id='${preorder_id}']`).style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+ document.querySelector(`[inorder_cell_id='${inorder_id}']`).style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+ document.querySelector(`[postorder_cell_id='${postorder_id}']`).style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+ 
 }
 
 function runClearTables() {

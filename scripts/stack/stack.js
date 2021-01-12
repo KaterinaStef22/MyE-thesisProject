@@ -65,7 +65,7 @@ function runPush() {
     if (myStack.size() - 2 !== -1) {
         document.querySelector(
             `[stack_cell_id='${myStack.size() - 2}']`
-        ).style.backgroundColor = "cyan";
+        ).style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
     }
 
     if (myStack.size() >= 10) {
@@ -101,7 +101,7 @@ function runPop() {
         document.querySelector(`[stack_cell_value='${i}']`).innerHTML = arraylist[i];
         document.querySelector(
             `[stack_cell_id='${i}']`
-        ).style.backgroundColor = "cyan";
+        ).style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
     }
     document.querySelector(
         `[stack_cell_id='${myStack.size()}']`
