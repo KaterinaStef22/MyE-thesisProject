@@ -213,9 +213,18 @@ function runAdd() {
         if (myList.size() - 1 <= 8) {
             document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.remove("hasNotValue");
             document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.add("hasValue");
+            document.getElementsByClassName("null")[myList.size() - 1].classList.remove("hasNotValue");
+            document.getElementsByClassName("null")[myList.size() - 1].classList.add("hasValue");
+            if(myList.size() -2<=8){
+                document.getElementsByClassName("null")[myList.size() - 2].classList.remove("hasValue");
+                document.getElementsByClassName("null")[myList.size() - 2].classList.add("hasNotValue");
+    
+            }
+
         }
+        
     }
-  
+   
 
 }
 
@@ -252,6 +261,14 @@ function runRemove() {
         if (myList.size() - 1 < 8) {
             document.getElementsByClassName("fa-arrow-right")[myList.size()].classList.remove("hasValue");
             document.getElementsByClassName("fa-arrow-right")[myList.size()].classList.add("hasNotValue");
+            document.getElementsByClassName("null")[myList.size()-1].classList.remove("hasNotValue");
+            document.getElementsByClassName("null")[myList.size()-1].classList.add("hasValue");
+            if(myList.size() -1<=8){
+                document.getElementsByClassName("null")[myList.size() ].classList.remove("hasValue");
+                document.getElementsByClassName("null")[myList.size() ].classList.add("hasNotValue");
+    
+            }
+
         }
         console.log("List Here before reverse " + myList.printList());
         reverseList = reverseArray(myList.printList());
@@ -282,7 +299,7 @@ function runSearch() {
         document.querySelector(`[ll_cell_id='${index}']`).style.backgroundColor = "#D8043C";
     }
 
-}
+} 
 
 function runClearList() {
     console.log("size before while:" + myList.size())
@@ -301,9 +318,12 @@ function runClearList() {
         }
         document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.remove("hasValue");
         document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.add("hasNotValue");
-        if (myList.size() - 1 <= 8) {
+        if (myList.size() - 1 < 8) {
             document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.remove("hasValue");
             document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.add("hasNotValue");
+            document.getElementsByClassName("null")[myList.size() -1].classList.remove("hasValue");
+            document.getElementsByClassName("null")[myList.size() -1].classList.add("hasNotValue");
+            
         }
         myList.removeAt(myList.size() - 1);
         console.log("size after while after removeAt:" + myList.size())
