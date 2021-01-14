@@ -123,7 +123,7 @@
               </b></p>
               <p><b>Σημαντικοί όροι για να γίνει κατανοητός ο όρος του πίνακα είναι οι εξής:</b></p>
                 <ul>
-                  <li><b>1. Στοιχεί:Τα περιεχόμενα του πίνακα ονομάζονται στοιχεία.</b></li>
+                  <li><b>1. Στοιχεία:Τα περιεχόμενα του πίνακα ονομάζονται στοιχεία.</b></li>
                   <li><b>2. Θέση μνήμης: Κάθε στοιχείο ενός πίνακα ανήκει σε μια θέση η οποία ονομάζεται
                      θέση μνήμης και χρησιμοποιείται για την αναγνώριση του στοιχείου.
                   </b></li>
@@ -138,7 +138,7 @@
         <div class="row padding  ">
           <div class="card  ">
             <div class="card-body algorithms-body ">
-              <h3 class="card-tittle">Linked List Data Structures</h3>
+              <h3 class="card-tittle">Δομή δεδομένων συνδεδεμένη λίστα</h3>
               <div class="row">
                 <div class="col-md-6">
                   <p><b>Μια συνδεδεμένη λίστα είναι μια ακολουθία δομών δεδομένων, 
@@ -192,22 +192,26 @@
                       <h3 class="card-tittle">Στοίβα</h3>
                       <div class="row">
                         <div class="col-md-6">
-                          <p1>Littel words:</p1>
+                          <p1>Λίγα λόγια: </p1>
                           <p class="card-text"><b>
-                            Stack is an abstract data type with
-                            a bounded(predefined) capacity. It is a simple data
-                            structure that allows adding and removing elements in
-                            a particular order. Every time an element is added,
-                            it goes on the top of the stack and the only element that
-                            can be removed is the element that is at the top of the stack,
-                            just like a pile of objects.</b></p>
-                          <p1>Basic features of Stack:</p1>
+                            Η στοίβα είναι μια αφηρημένη δομή δεδομένων και η υλοποιήση της μπορεί
+                            να πραγματοποιηθεί χρησιμοποιώντας ένα πίνακα με σταθερό μήκος. Η δομή επιτρέπει 
+                            την προσθήκη και την αφαίρεση στοιχείων.Κάθε φορά που προστίθεται ένα στοιχείο,
+                            πηγαίνει στην κορυφή της στοίβας και το μόνο στοιχείο που
+                            μπορεί να αφαιρεθεί είναι το στοιχείο που βρίσκεται στην κορυφή της στοίβας,
+                            δηλαδή το στοιχείο που προστίθεται τελευταίο, εξέρχεται πρώτο.
+                            </b></p>
+                          <p1>Βασικά χαρακτηριστικά της στοίβας:</p1>
                           <ol>
-                            <li><b> 1.Stack is an ordered list of similar data type.</b></li>
-                            <li><b>2.push() function is used to insert new elements into the Stack and pop()
-                              function is used to remove an element from the stack. Both insertion
-                              and removal are allowed at only one end of Stack called Top.</b></li>
+                            <li><b> 1. H στοίβα είναι μια λίστα με παρόμοιο τύπο δεδομένων.Είναι δομή Lifo.</b></li>
+                            <li><b> 2. Η λειτουργία push χρησιμοποιείται για την εισαγωγή νέων στοιχείων 
+                              στην στοίβα και η λειτουργία pop χρησιμοποιείται για την αφαίρεση 
+                              ενός στοιχείου από τη στοίβα. Οι δυο αυτές λειτουργίες επιτρέπεται να υλοποιήθουν
+                            μόνο στο άκρο της στοίβας που ονομάζεται κορυφή Top. </b></li>
                           </ol>
+                          <div class="col-md-6">
+                            <img src="images/stoiva-stack.png">
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -357,26 +361,23 @@
                       <h3 class="card-tittle">Ουρά</h3>
                       <div class="row">
                         <div class="col-md-6">
-                          <p1>Little words:</p1>
+                          <p1>Λίγα λόγια:</p1>
                           <p class="card-text"><b>
-                          Queue is also an abstract data type or a linear data structure,
-                          just like stack data structure, in which the first element is
-                          inserted from one end called the REAR(also called tail),
-                          and the removal of existing element takes place from
-                          the other end called as FRONT(also called head).
-                          This makes queue as FIFO(First in First Out) data structure,
-                          which means that element inserted first will be removed first. </b></p>
-                          <p1>Basic features of Queue:</p1>
+                            Η ουρά είναι επίσης ένας αφηρημένος τύπος δεδομένων ή μια γραμμική δομή δεδομένων. 
+                            Το πρώτο στοιχείο εισάγεται από το ένας άκρο της ουράς που ονομάζεται Rear και
+                          και η αφαίρεση του στοιχείου πραγματοποιείται από το άλλο άκρο που ονομάζεται Front.
+                          Στον αλγόριθμο της ουράς το στοιχείο που εισέρχεται πρώτο είναι και αυτό που θα εξέλθει πρώτο.</b></p>
+                          <p1> Βασικά χαρακτηριστικά της ουράς:</p1>
                           <ol>
-                            <li> <b>1.Like stack, queue is also an ordered list of elements of similar data types.Queue is
-                              a
-                              FIFO( First in First Out ) structure.</b></li>
-                            <li> <b>2.peek()function is oftenly used to return the value of first element without dequeuing
-                              it.</b></li>
+                            <li> <b>1. Η ουρά είναι μια ταξινομημένη λίστα με παρόμοιο τύπο δεδομένων. Είναι δομή Fifo.</b></li>
+                            <li> <b>2. Η λειτουργία enqueue χρησιμοποιείται για την εισαγωγή νέων στοιχείων 
+                              στην στοίβα και η λειτουργία denqueue χρησιμοποιείται για την αφαίρεση 
+                              ενός στοιχείου από τη στοίβα.</b></li>
                           </ol>
-
+                          <div class="col-md-6">
+                            <img src="images/oura-enqueue.png">
+                          </div>
                         </div>
-
                       </div>
                     </div>
                   </div>
@@ -513,26 +514,23 @@
                       <h3 class="card-tittle">Συνδεδεμένη λίστα</h3>
                       <div class="row">
                         <div class="col-md-6">
-                          <p1>Littel words:</p1>
+                          <p1>Λίγα λόγια:</p1>
                           <p class="card-text"><b>
-                            Linked List is a very commonly used linear data structure
-                            which consists of group of nodes in a sequence.
-                            Each node holds its own data
-                            and the address of the next node hence forming a chain like structure.
-                            Linked Lists are used to create trees and graphs.</b>
-                          </p>
-                          <p1>The concept of Linked List:</p1>
+                           Η συνδεδεμένη λίστα είναι μια γραμμική δομή δεδομένων
+                            που αποτελείται από ομάδα κόμβων σε μια ακολουθία.Κάθε κόμβος διατηρεί τα δικά του δεδομένα
+                            και συνδέεται με τον επόμενο κόμβο σχηματίζοντας μια δομή. Οι συνδεδεμένες λίστες χρησιμοποιούνται για τη 
+                            δημιουργία δέντρων και γραφημάτων.
+                          </b></p>
+                          <p1>Η συνδεδεμένη λίστα υλοποιείται με τα παρακάτω στοιχεία:</p1>
                           <ol>
-                            <li><b> 1.Link − Each link of a linked list can store a data called an element.
-                            </b></li>
-                            <li><b>2.Next − Each link of a linked list contains a link to the next link called Next.</b></li>
-                            <li><b>3.LinkedList − A Linked List contains the connection link to the first link called
-                              First.
-                            </b> </li>
+                            <li><b> 1.Σύνδεσμος: Κάθε σύνδεσμος μιας συνδεδεμένης λίστας μπορεί να αποθηκεύσει δεδομένα.</b></li>
+                            <li><b>Επόμενο: Το στοιχείο αυτό είναι ένας δείκτης σε επόμενο στοιχείο.</b> </li>
+                             <li><b> 3. Συνδεδεμένη λίστα: Μια συνδεδεμένη λίστα περιέχει τρόπο σύνδεσης με τον πρώτο σύνδεσμο της λίστας.</b></li>
                           </ol>
-
+                          <div class="col-md-6">
+                            <img src="images/syndedemenhlista-ll.png">
+                          </div>
                         </div>
-
                       </div>
                     </div>
                   </div>
@@ -719,28 +717,29 @@
                       <h3 class="card-tittle">Δυαδικό δέντρο</h3>
                       <div class="row">
                         <div class="col-md-6">
-                          <p1>Littel words:</p1>
+                          <p1>Λίγα λόγια:</p1>
                           <p class="card-text"><b>
-                            A binary tree is a hierarchical data structure
-                            in which each node has at most two children
-                            generally referred as left child and right child. </b></p>
-                          <p1>Each node contains three components:</p1>
+                            Ένα δυαδικό δέντρο είναι μια δομή δεδομένων η οποία χαρακτηρίζεται ως
+                            ιεραρχική. Σε αυτή την δομή  κάθε κόμβος έχει το πολύ δύο παιδιά, τα οποία τοποθετούνται δεξιά και αριστερά.Η διάσχιση του δέντρου
+                          γίνεται με 3 τρόπους. Την προδιατεταγμένη, την μεταδιατεταγμένη και την ενδοδιατεταγμένη.Σε κάθε μια τα στοιχεία διαβάζονται με διαφορετικό τρόπο. </b></p>
+                          <p1>Κάθε κόμβος περιέχει τρία στοιχεία:</p1>
                           <ol>
-                            <li><b>1.Pointer to left subtree</b></li>
-                            <li><b>2.Pointer toright subtree</b></li>
-                            <li><b>3.Data elemennt</b></li>
+                            <li><b>a. Δείκτης προς αριστερό υποδένδρο</b></li>
+                            <li><b>b. Δείκτης προς δεξιό υποδένδρο</b></li>
+                            <li><b>c. Στοιχείο των δεδομέων</b></li>
                           </ol>
                           <p class="card-text">
-                            <p1>Binary Tree: Common Terminologies</p1>
+                            <p1>Βασικά χαρακτηριστικά δυαδικού δέντρου</p1>
                             <u.>
-                              <li><b>Root: Topmost node in a tree.</b></li>
-                              <li><b>Parent: Every node (excluding a root) in a tree is connected by a directed edge from
-                                exactly one other node. This node is called a parent.</b></li>
-                              <li><b>Child: A node directly connected to another node when moving away from the root</b></li>
+                              <li><b> Κορυφή-Root: Κορυφαίος κόμβος σε ένα δέντρο.</b></li>
+                              <li><b> Γονέας-Parent: Κάθε κόμβος σε ένα δέντρο συνδέεται με τον επόμενο κόμβο.</b></li>
+                              <li><b> Παιδί-Child: Ένας κόμβος που συνδέεται άμεσα με έναν άλλο κόμβο όταν απομακρύνεται από τη ρίζα.</b></li>
                             </u.>
                           </p>
-
-                          </ol>
+                        </ol>
+                        <div class="col-md-6">
+                          <img src="images/binary tree-dyadiko dentro.png">
+                        </div>
 
                         </div>
 
