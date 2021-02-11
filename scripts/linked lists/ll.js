@@ -264,8 +264,8 @@ function runRemove() {
             document.getElementsByClassName("null")[myList.size()-1].classList.remove("hasNotValue");
             document.getElementsByClassName("null")[myList.size()-1].classList.add("hasValue");
             if(myList.size() -1<=8){
-                document.getElementsByClassName("null")[myList.size() ].classList.remove("hasValue");
-                document.getElementsByClassName("null")[myList.size() ].classList.add("hasNotValue");
+                document.getElementsByClassName("null")[myList.size()].classList.remove("hasValue");
+                document.getElementsByClassName("null")[myList.size()].classList.add("hasNotValue");
     
             }
 
