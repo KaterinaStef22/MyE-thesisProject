@@ -291,21 +291,21 @@ function runInsertForPostOrder() {
 }
 
 function runDelete() {
-  whiteTheTable();
+ whiteTheTable();
 
   for (let i = 0; i <= myBst.size(); i++) {
-    document.querySelector(`[preorder_cell_value='${i}']`).innerHTML = "";
-    document.querySelector(`[inorder_cell_value='${i}']`).innerHTML = "";
+   document.querySelector(`[preorder_cell_value='${i}']`).innerHTML = "";
+   document.querySelector(`[inorder_cell_value='${i}']`).innerHTML = "";
     document.querySelector(`[postorder_cell_value='${i}']`).innerHTML = "";
-  }
+ }
 
   let inputValue = document.getElementById("binarytreetext").value;
   myBst.remove(inputValue);
 
-  runInsertForPostOrder()
-  runInsertForInOrder()
-  runInsertForPreOrder()
-  disableInsert();
+ runInsertForPostOrder()
+ runInsertForInOrder()
+ runInsertForPreOrder()
+ disableInsert();
 }
 
 function whiteTheTable() {
