@@ -1,5 +1,5 @@
 /*GENERAL*/ 
-
+MAX_INPUT_LENGTH = 10;
 // Allow only numbers on input
 
 function onlyNumbersOnInput() {
