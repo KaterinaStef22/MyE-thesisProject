@@ -210,12 +210,14 @@ function runAdd() {
         document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.remove("hasNotValue");
         document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.add("hasValue");
        
-        if (myList.size() - 1 <= 8) {
+        if (myList.size() - 1 <= 9) {
             document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.remove("hasNotValue");
             document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.add("hasValue");
+            //if(myList.size()-1 <10){
             document.getElementsByClassName("null")[myList.size() - 1].classList.remove("hasNotValue");
             document.getElementsByClassName("null")[myList.size() - 1].classList.add("hasValue");
-            if(myList.size() -2<=8){
+            //}
+            if(myList.size() -2<=8 && myList.size() >=2){
                 document.getElementsByClassName("null")[myList.size() - 2].classList.remove("hasValue");
                 document.getElementsByClassName("null")[myList.size() - 2].classList.add("hasNotValue");
     
@@ -225,7 +227,6 @@ function runAdd() {
         
     }
    
-
 }
 
 const whitetable = function whiteTheTable() {
@@ -258,7 +259,7 @@ function runRemove() {
         myList.remove(inputValue);
         document.querySelector(`[ll_cell_id='${myList.size()}']`).classList.remove("hasValue");
         document.querySelector(`[ll_cell_id='${myList.size()}']`).classList.add("hasNotValue");
-        if (myList.size() - 1 < 8) {
+        if (myList.size() - 1 <= 8) {
             document.getElementsByClassName("fa-arrow-right")[myList.size()].classList.remove("hasValue");
             document.getElementsByClassName("fa-arrow-right")[myList.size()].classList.add("hasNotValue");
             document.getElementsByClassName("null")[myList.size()-1].classList.remove("hasNotValue");
@@ -283,6 +284,7 @@ function runRemove() {
 
         }
         disableAdd();
+
     }
 }
 
@@ -318,19 +320,26 @@ function runClearList() {
         }
         document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.remove("hasValue");
         document.querySelector(`[ll_cell_id='${myList.size() - 1}']`).classList.add("hasNotValue");
-        if (myList.size() - 1 < 8) {
-            document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.remove("hasValue");
-            document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.add("hasNotValue");
-            document.getElementsByClassName("null")[myList.size() -1].classList.remove("hasValue");
-            document.getElementsByClassName("null")[myList.size() -1].classList.add("hasNotValue");
+        // if (myList.size() - 1 <= 8) {
+        //     document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.remove("hasValue");
+        //     document.getElementsByClassName("fa-arrow-right")[myList.size() - 1].classList.add("hasNotValue");
+        //     document.getElementsByClassName("null")[myList.size() -1].classList.remove("hasValue");
+        //     document.getElementsByClassName("null")[myList.size() -1].classList.add("hasNotValue");
             
-        }
+        // }
         myList.removeAt(myList.size() - 1);
         console.log("size after while after removeAt:" + myList.size())
 
     }
 
     disableAdd();
+
+    for (let i=0; i<10;i++){
+        document.getElementsByClassName("fa-arrow-right")[i].classList.remove("hasValue");
+        document.getElementsByClassName("fa-arrow-right")[i].classList.add("hasNotValue");
+        document.getElementsByClassName("null")[i].classList.remove("hasValue");
+        document.getElementsByClassName("null")[i].classList.add("hasNotValue");
+    }
 
 }
 
