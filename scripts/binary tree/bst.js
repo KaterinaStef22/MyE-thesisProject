@@ -299,7 +299,7 @@ function runDelete() {
     document.querySelector(`[postorder_cell_value='${i}']`).innerHTML = "";
  }
 
-  let inputValue = document.getElementById("binarytreetext").value;
+  let inputValue =parseInt(document.getElementById("binarytreetext").value);
   myBst.remove(inputValue);
 
  runInsertForPostOrder()
@@ -317,7 +317,7 @@ function whiteTheTable() {
 }
 
 function runFind() {
-  let inputValue = document.getElementById("binarytreetext").value;
+  let inputValue = parseInt(document.getElementById("binarytreetext").value);
   paintTheCells(inputValue)
   let insertedElements = document.getElementById("insertedElements").innerText;
   for (let i = 0; i < myBst.preOrder().length; i++) {
