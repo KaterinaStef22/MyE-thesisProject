@@ -243,7 +243,7 @@ function disableInsert() {
 var tempArray = new Array();
 function runInsert() {
 
-  let inputValue = document.getElementById("binarytreetext").value;
+  let inputValue = parseInt(document.getElementById("binarytreetext").value);
   let text = document.createTextNode(inputValue);
   let insertedElements = document.getElementById("insertedElements").innerText;
   if (disableInsert()) {
