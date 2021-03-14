@@ -264,11 +264,6 @@ function runRemove() {
             document.getElementsByClassName("fa-arrow-right")[myList.size()].classList.add("hasNotValue");
             document.getElementsByClassName("null")[myList.size()-1].classList.remove("hasNotValue");
             document.getElementsByClassName("null")[myList.size()-1].classList.add("hasValue");
-            if(myList.size() -1<=8){
-                document.getElementsByClassName("null")[myList.size()].classList.remove("hasValue");
-                document.getElementsByClassName("null")[myList.size()].classList.add("hasNotValue");
-    
-            }
 
         }
         console.log("List Here before reverse " + myList.printList());
@@ -284,6 +279,12 @@ function runRemove() {
 
         }
         disableAdd();
+
+        if(myList.size() -1<=8){
+                document.getElementsByClassName("null")[myList.size()].classList.remove("hasValue");
+                document.getElementsByClassName("null")[myList.size()].classList.add("hasNotValue");
+    
+            }
 
     }
 }
